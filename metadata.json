@@ -1,0 +1,6 @@
+{
+  "name": "Feheziko Platform",
+  "description": "Plateforme professionnelle d'apprentissage des langues offline-first pour les locuteurs malgaches, avec fiches pédagogiques, dictées orales et shadowing.",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

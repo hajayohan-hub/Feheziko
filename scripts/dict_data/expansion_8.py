@@ -1,0 +1,60 @@
+# 50 Final Vocabulary items to surpass 1000 unique French-Malagasy entries
+
+items = [
+    # General vocabulary items
+    ("Abondance", "n.f.", "Harena be / Abondance", "Grande quantité de biens.", "Une récolte en abondance cette année.", "Fijinjana harena be tamin'ity taona ity."),
+    ("Activité", "n.f.", "Asa / Fanaovana", "Ensemble d'actions ou occupation.", "Une activité sportive quotidienne.", "Asa spora amin'ny andro rehetra."),
+    ("Adaptation", "n.f.", "Fihenan-drano / Adaptation", "Ajustement à un milieu.", "Une bonne adaptation à la culture locale.", "Adaptation tsara amin'ny kolontsaina an-toerana."),
+    ("Affection", "n.f.", "Fitiavana / Affection", "Sentiment d'attachement.", "Montrer de l'affection envers ses proches.", "Maneho fitiavana amin'ny havana."),
+    ("Agilité", "n.f.", "Fahaizana haingana / Agilité", "Aisance de mouvement.", "L'agilité du lémurien dans les arbres.", "Agilité ny maki ao an-kazo."),
+    ("Alliance", "n.f.", "Fihavanana / Alliance", "Union ou accord entre personnes.", "Une alliance solide entre les communautés.", "Fihavanana mafy amin'ny fokonolona."),
+    ("Ambition noble", "n.f.", "Manompo amin'ny fahasalamana", "Désir d'élever son esprit.", "Poursuivre une ambition noble.", "Manompo amin'ny fahasalamana."),
+    ("Amélioration", "n.f.", "Fampirosoana", "Changement rendant meilleur.", "Constater une amélioration de sa prononciation.", "Mahita fampirosoana amin'ny fantom-pitenenana."),
+    ("Analyse approfondie", "n.f.", "Fizahana lalina", "Étude détaillée.", "Une analyse approfondie de la situation.", "Fizahana lalina ny olana."),
+    ("Animation", "n.f.", "Fahavitrihana / Animation", "Mouvement et vivacité.", "L'animation joyeuse du marché central.", "Animation joyeuse ao an-tsena."),
+
+    ("Appellation", "n.f.", "Anarana fanao / Appellation", "Nom attribué à une chose.", "L'appellation d'origine contrôlée.", "Appellation d'origine contrôlée."),
+    ("Apprentissage continu", "n.m.", "Fianarana hatrany", "Acquisition permanente de savoirs.", "L'apprentissage continu tout au long de la vie.", "Fianarana hatrany amin'ny fiainana tontolo."),
+    ("Architecte d'intérieur", "n.m.", "Mpanamboatra anatiny", "Spécialiste de la décoration intérieure.", "Un architecte d'intérieur réaménage la maison.", "Mpanamboatra anatiny mandamina trano."),
+    ("Aspiration", "n.f.", "Fanantenana lehibe", "Désir profond d'épanouissement.", "Réaliser ses aspirations professionnelles.", "Mano ny fanantenana lehibe asa."),
+    ("Assiduité", "n.f.", "Fahavitrihana amin'ny fianarana", "Présence régulière et constante.", "L'assiduité aux cours garantit la réussite.", "Fahavitrihana amin'ny fampianarana."),
+    ("Astuce", "n.f.", "Fahaizana kely / Astuce", "Moyen ingénieux pour réussir.", "Une astuce pour retenir les mots de vocabulaire.", "Astuce hahatadidy ny teny vaovao."),
+    ("Atmosphère paisible", "n.f.", "Rivotra milamina", "Ambiance sereine.", "Une atmosphère paisible dans la campagne malgache.", "Rivotra milamina ao an-tsaha gass."),
+    ("Aventure culturelle", "n.f.", "Dia kolontsaina", "Voyage riche en découvertes.", "Vivre une aventure culturelle inoubliable.", "Mivelona dia kolontsaina tsy adino."),
+    ("Avis éclairé", "n.m.", "Hevitra mazava", "Opinion fondée sur l'expérience.", "Donner un avis éclairé sur le projet.", "Manome hevitra mazava amin'ny tetikasa."),
+    ("Bien-être", "n.m.", "Fahasalamana sy fiadanana", "État d'épanouissement physique et mental.", "Préserver son bien-être au quotidien.", "Miantoka fahasalamana sy fiadanana."),
+
+    ("Bienfait", "n.m.", "Zavatra tsara / Bienfait", "Effet salutaire d'une action.", "Les bienfaits de la marche à pied.", "Zavatra tsara avy amin'ny fandehanana an-tongotra."),
+    ("Calcul mental", "n.m.", "Kajy an-doha", "Opération mathématique effectuée de tête.", "S'entraîner au calcul mental chaque matin.", "Mano kajy an-doha maraina."),
+    ("Calme intérieur", "n.m.", "Fiadanana am-po", "Paix de l'esprit.", "Retrouver son calme intérieur par la méditation.", "Nahazo fiadanana am-po."),
+    ("Camaraderie", "n.f.", "Mpiara-miasa tsara / Namana", "Esprit de camaraderie.", "Une camaraderie sincère entre camarades de classe.", "Namana sincère ao an-kilasy."),
+    ("Capacité d'écoute", "n.f.", "Fahaza mihaino", "Aptitude à écouter les autres.", "Développer une grande capacité d'écoute.", "Mampiroso ny fahaza mihaino."),
+    ("Captivant", "adj.", "Mahaliana be", "Qui retient fortement l'attention.", "Un roman captivant qu'on ne peut lâcher.", "Boky tantara mahaliana be."),
+    ("Certitude", "n.f.", "Fahatokisana be / Marina", "Assurance complète de la vérité.", "Avoir la certitude de réussir.", "Manana fahatokisana be hahatsangana."),
+    ("Chaleur humaine", "n.f.", "Hafanana am-po", "Bienveillance et affection sincère.", "La chaleur humaine de l'accueil malgache.", "Hafanana am-po amin'ny fandraisana gass."),
+    ("Charme naturel", "n.m.", "Mendrika voajanahary", "Attrait spontané et authentique.", "Le charme naturel des paysages de l'île.", "Mendrika voajanahary ny nosy."),
+    ("Chef-d'œuvre", "n.m.", "Kanto lehibe indrindra", "Œuvre majeure accomplie.", "Un chef-d'œuvre de la littérature malgache.", "Kanto lehibe indrindra amin'ny literature gass."),
+
+    ("Choix judicieux", "n.m.", "Safidy tsara", "Sélection avisée et réfléchie.", "Faire un choix judicieux pour ses études.", "Mano safidy tsara amin'ny fianarana."),
+    ("Clarté d'esprit", "n.f.", "Fahamazavana saina", "Lucidité dans la pensée.", "Retrouver sa clarté d'esprit au calme.", "Nahazo fahamazavana saina am-pimonina."),
+    ("Collaboration efficace", "n.f.", "Fifanampiana tsara", "Travail d'équipe réussi.", "Une collaboration efficace entre étudiants.", "Fifanampiana tsara amin'ny mpianatra."),
+    ("Comfort moderne", "n.m.", "Fiainana mahafinaritra vaovao", "Aisance procurée par la technologie.", "Profiter du confort moderne de l'hôtel.", "Mampiasa fiainana mahafinaritra ho an'ny hotely."),
+    ("Communion avec la nature", "n.f.", "Firaisana amin'ny zavaboary", "Lien harmonieux avec l'environnement.", "Senti la communion avec la nature en forêt.", "Firaisana amin'ny zavaboary ao an'ala."),
+    ("Communication fluide", "n.f.", "Fitenenana mora sy mazava", "Échange simple et compréhensible.", "Une communication fluide entre les membres.", "Fitenenana mora sy mazava amin'ny mpiara-miasa."),
+    ("Compagnon de voyage", "n.m.", "Namana dia", "Personne avec qui l'on voyage.", "Un compagnon de voyage agréable.", "Namana dia mahafinaritra."),
+    ("Compétence professionnelle", "n.f.", "Fahaizana asa lalina", "Savoir-faire dans un domaine d'activité.", "Une compétence professionnelle reconnue.", "Fahaizana asa lalina ekena."),
+    ("Compréhension mutuelle", "n.f.", "Fifankahazoana", "Entente partagée réciproque.", "La compréhension mutuelle renforce l'amitié.", "Mampiorina ny fihavanana ny fifankahazoana."),
+    ("Concentration maximale", "n.f.", "Fijery tsara an-doha", "Attention entière portée à une tâche.", "Travailler avec une concentration maximale.", "Miasa amin'ny fijery tsara an-doha."),
+
+    # Final ten items
+    ("Confiance en soi", "n.f.", "Fahatokisana tena", "Assurance en ses propres capacités.", "Développer la confiance en soi par la pratique.", "Mampiroso fahatokisana tena amin'ny fampiharana."),
+    ("Convivialité", "n.f.", "Fihavanana sy joy", "Chaleur des relations humaines.", "La convivialité des repas en famille.", "Fihavanana sy joy amin'ny sakafo am-fianakaviana."),
+    ("Coopération internationale", "n.f.", "Fifanampiana iraisam-pirenena", "Entraide entre les nations.", "La coopération internationale pour l'éducation.", "Fifanampiana iraisam-pirenena ho an'ny fampianarana."),
+    ("Création artistique", "n.f.", "Kanto mpamorona", "Œuvre née de l'imagination.", "Une création artistique originale et belle.", "Kanto mpamorona tsara sy vaovao."),
+    ("Curiosité scientifique", "n.f.", "Lasa mila mianatra siansa", "Désir de comprendre le monde.", "Nourrir sa curiosité scientifique.", "Mampiditra fahaizana siansa."),
+    ("Découverte enrichissante", "n.f.", "Fahatsoratra mahafinaritra", "Trouvaille apportant un savoir.", "Une découverte enrichissante sur l'histoire de l'île.", "Fahatsoratra mahafinaritra ny tantaran'ny nosy."),
+    ("Dévouement total", "n.m.", "Fampiasana tena tontolo", "Engagement absolu.", "Un dévouement total pour le service public.", "Fampiasana tena tontolo amin'ny vahoaka."),
+    ("Dialogue constructif", "n.m.", "Fitenenana mampiroso", "Discussion menant à un progrès.", "Engager un dialogue constructif et respectueux.", "Mano fitenenana mampiroso sy mpanaja."),
+    ("Dynamisme culturel", "n.m.", "Fahavitrihana kolontsaina", "Énergie créative d'une société.", "Le dynamisme culturel des artistes malgaches.", "Fahavitrihana kolontsaina mpanakanto gass."),
+    ("Épanouissement personnel", "n.m.", "Fahafaham-po fiainana", "Développement accompli de soi.", "Atteindre un plein épanouissement personnel.", "Nahazo fahafaham-po fiainana tontolo.")
+]

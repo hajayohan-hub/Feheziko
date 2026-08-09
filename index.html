@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="mg" class="h-full bg-slate-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:; worker-src 'self' blob:; child-src 'self' blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:;" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/icon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Feheziko Platform - Apprendre le français parlé</title>
+    <!-- Instant dark mode initialization script to prevent FOUC -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem("feheziko_dark_mode");
+          var isDark = stored === "true";
+          if (stored === null) {
+            var prog = localStorage.getItem("feheziko_progress");
+            if (prog) {
+              var parsed = JSON.parse(prog);
+              if (parsed && parsed.accessibility && parsed.accessibility.darkMode) {
+                isDark = true;
+              }
+            }
+          }
+          if (isDark) {
+            document.documentElement.classList.add("dark", "dark-mode");
+            document.documentElement.setAttribute("theme", "dark");
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Google Fonts for custom typography pairing (Inter, Space Grotesk, JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="h-full antialiased text-slate-700 bg-slate-50">
+    <!-- Vanilla Web Component Orchestrator Entrypoint -->
+    <feheziko-app id="root"></feheziko-app>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
