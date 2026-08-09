@@ -28,6 +28,8 @@ import "./components/fz-onboarding";
 import "./components/fz-quick-search";
 import "./components/fz-delf-exam";
 import "./components/fz-admin-dashboard";
+import "./components/fz-guided-tour";
+import "./components/fz-update-banner";
 
 export class FehezikoApp extends HTMLElement {
   private db!: DatabaseEngine;
@@ -274,6 +276,12 @@ export class FehezikoApp extends HTMLElement {
       this.innerHTML = `
         <!-- Onboarding Guided Overlay -->
         <fz-onboarding></fz-onboarding>
+
+        <!-- Service Worker PWA Update Notification Banner -->
+        <fz-update-banner></fz-update-banner>
+
+        <!-- Guided Navigation Tour Popover Overlay -->
+        <fz-guided-tour></fz-guided-tour>
 
         <!-- Global Quick Search Modal (Ctrl+K) -->
         <fz-quick-search></fz-quick-search>

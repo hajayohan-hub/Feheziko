@@ -179,17 +179,27 @@ export class FzSidebar extends HTMLElement {
         </button>
       </nav>
 
-      <!-- Bottom Quick Pay Invite -->
-      <div class="hidden md:block bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-4 border border-indigo-100 mt-auto">
-        <h4 class="font-bold text-slate-800 text-sm">Feheziko Premium</h4>
-        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Haingana, feno ary tsy mila tambajotra Internet.</p>
-        <button onclick="window.feheziko.navigate('payment')" class="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 rounded-xl transition-colors shadow-xs">
+      <!-- Bottom Quick Pay Invite & Guided Tour -->
+      <div class="hidden md:block bg-gradient-to-br from-indigo-50/80 to-purple-50/80 dark:from-slate-900 dark:to-indigo-950/60 rounded-2xl p-3.5 border border-indigo-100 dark:border-slate-800 mt-auto space-y-2">
+        <div class="flex items-center justify-between">
+          <h4 class="font-bold text-slate-800 dark:text-slate-200 text-xs">Feheziko App</h4>
+          <button id="sidebarStartTourBtn" class="px-2 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-extrabold text-[11px] rounded-lg border border-indigo-200/80 dark:border-indigo-800/80 transition-all cursor-pointer shadow-2xs flex items-center gap-1 active:scale-95" title="Hagaga ny fampidirana">
+            <span>🧭</span>
+            <span>Tour</span>
+          </button>
+        </div>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">Haingana, feno ary tsy mila tambajotra Internet.</p>
+        <button onclick="window.feheziko.navigate('payment')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 rounded-xl transition-colors shadow-xs cursor-pointer">
           👑 Hiditra Premium
         </button>
       </div>
     `;
 
     // Click Bindings
+    this.querySelector("#sidebarStartTourBtn")?.addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("feheziko_start_guided_tour"));
+    });
+
     const tabs = ["dashboard", "lessons", "dialogues", "dictionary", "challenges", "delf", "settings", "admin"];
     tabs.forEach(tab => {
       this.querySelector(`#nav-${tab}`)?.addEventListener("click", () => {

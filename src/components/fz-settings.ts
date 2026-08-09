@@ -1513,8 +1513,7 @@ export class FzSettings extends HTMLElement {
 
     // Start Tour button trigger
     this.querySelector("#startTourBtn")?.addEventListener("click", () => {
-      this.currentTourStep = 0;
-      this.renderTour();
+      window.dispatchEvent(new CustomEvent("feheziko_start_guided_tour"));
     });
 
     // Offline Help triggers

@@ -28,6 +28,25 @@ export class FzDashboard extends HTMLElement {
   private speakingChallengeResult: any = null;
   private speakingChallengeInterimTranscript: string = "";
 
+  // 30-Second Quick Dictation state variables
+  private qdActive: boolean = false;
+  private qdTimeLeft: number = 30;
+  private qdTimer: any = null;
+  private qdTargetPhrase: { phrase: string; translationMg: string; translationFr: string } | null = null;
+  private qdUserInput: string = "";
+  private qdSubmitted: boolean = false;
+  private qdAccuracyScore: number = 0;
+
+  private qdSentences = [
+    { phrase: "Le soleil brille aujourd'hui.", translationMg: "Mirehitra ny masoandro anio.", translationFr: "Le soleil brille aujourd'hui." },
+    { phrase: "J'aime apprendre le français.", translationMg: "Tianao ny mianatra teny frantsay.", translationFr: "J'aime apprendre le français." },
+    { phrase: "Où se trouve le marché ?", translationMg: "Aiza no misy ny tsena ?", translationFr: "Où se trouve le marché ?" },
+    { phrase: "Nous allons à la gare.", translationMg: "Handeha ho any amin'ny fiantsonana izahay.", translationFr: "Nous allons à la gare." },
+    { phrase: "S'il vous plaît, écoutez attentivement.", translationMg: "Azafady, mihainoa tsara.", translationFr: "S'il vous plaît, écoutez attentivement." },
+    { phrase: "Il fait un temps magnifique.", translationMg: "Maha-te-haka rivotra ny toetr'andro.", translationFr: "Il fait un temps magnifique." },
+    { phrase: "Merci beaucoup pour votre aide.", translationMg: "Misaotra betsaka amin'ny fanampianao.", translationFr: "Merci beaucoup pour votre aide." }
+  ];
+
   private dailySpeakingPhrases = [
     {
       id: "dsp_1",
@@ -211,6 +230,44 @@ export class FzDashboard extends HTMLElement {
       const todayPhrase = this.getTodaySpeakingPhrase();
       this.startDailySpeakingRecord(todayPhrase);
     });
+
+    this.querySelector("#dashboardNextStepBtn")?.addEventListener("click", () => {
+      (window as any).feheziko?.navigate("lessons");
+    });
+
+    // Bind Quick Dictation 30s Actions
+    this.querySelector("#startQdBtn")?.addEventListener("click", () => {
+      this.startQuickDictation();
+    });
+
+    this.querySelectorAll("#resetQdBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.resetQuickDictation();
+      });
+    });
+
+    this.querySelector("#qdSubmitBtn")?.addEventListener("click", () => {
+      this.submitQuickDictation();
+    });
+
+    this.querySelector("#qdReplayAudioBtn")?.addEventListener("click", () => {
+      if (this.qdTargetPhrase) {
+        const audio = (window as any).feheziko?.audio;
+        if (audio) audio.speakFrench(this.qdTargetPhrase.phrase);
+      }
+    });
+
+    const qdInputEl = this.querySelector("#qdInput") as HTMLInputElement;
+    if (qdInputEl) {
+      qdInputEl.addEventListener("input", (e: any) => {
+        this.qdUserInput = e.target.value;
+      });
+      qdInputEl.addEventListener("keydown", (e: KeyboardEvent) => {
+        if (e.key === "Enter") {
+          this.submitQuickDictation();
+        }
+      });
+    }
   }
 
   /**
@@ -473,6 +530,58 @@ export class FzDashboard extends HTMLElement {
           </div>
         </div>
 
+        <!-- Next Recommended Step Highlight Widget -->
+        ${(() => {
+          const content = (window as any).feheziko?.languageContent;
+          if (!content?.levels) return "";
+          
+          const allFlatLessons: any[] = [];
+          content.levels.forEach((l: any) => allFlatLessons.push(...(l.lessons || [])));
+          const nextLesson = allFlatLessons.find((l: any) => !progress.completedLessons.includes(l.id)) || allFlatLessons[0];
+          if (!nextLesson) return "";
+
+          const completedCount = progress.completedLessons.length;
+          const totalCount = allFlatLessons.length;
+
+          return `
+            <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 shadow-xl border border-indigo-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden animate-stagger animate-stagger-delay-3">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div class="space-y-2 max-w-xl">
+                <div class="flex items-center space-x-2">
+                  <span class="bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full font-mono">
+                    ⚡ ${isMg ? "DINGANA MANARAKA" : "PROCHAINE ÉTAPE"}
+                  </span>
+                  <span class="text-xs font-mono text-indigo-300">
+                    ${isMg ? `Lesona #${completedCount + 1} amin'ny ${totalCount}` : `Étape ${completedCount + 1} sur ${totalCount}`}
+                  </span>
+                </div>
+
+                <h3 class="text-xl md:text-2xl font-black text-white tracking-tight">
+                  ${nextLesson.title}
+                </h3>
+
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-2">
+                  ${nextLesson.content?.introduction || ""}
+                </p>
+
+                <div class="flex items-center space-x-3 pt-1 text-xs font-mono">
+                  <span class="bg-white/10 px-2.5 py-1 rounded-lg text-amber-300 font-bold border border-white/10">
+                    +${nextLesson.xp} XP
+                  </span>
+                  <span class="text-slate-300">⏱️ ~10 min</span>
+                  <span class="text-slate-300">🎧 Audio & Prononciation</span>
+                </div>
+              </div>
+
+              <button id="dashboardNextStepBtn" data-id="${nextLesson.id}" class="w-full md:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm px-6 py-3.5 rounded-2xl transition-all shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-2 cursor-pointer">
+                <span>🚀</span>
+                <span>${isMg ? "Handeha hianatra anio" : "Lancer cette étape"}</span>
+              </button>
+            </div>
+          `;
+        })()}
+
         <!-- Learning Modules Circular Progress Overview -->
         ${this.renderModuleProgressWidget(isMg, progress, allLevels)}
 
@@ -482,6 +591,9 @@ export class FzDashboard extends HTMLElement {
 
             <!-- Daily Speaking Challenge Widget -->
             ${this.renderDailySpeakingChallengeWidget(isMg)}
+
+            <!-- 30-Second Quick Dictation Widget -->
+            ${this.render30sQuickDictationWidget(isMg)}
 
             <!-- Recharts Pronunciation Scoring Trends Widget -->
             <div id="rechartsPronunciationContainer" class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-xs relative overflow-hidden animate-stagger animate-stagger-delay-4"></div>
@@ -1844,6 +1956,203 @@ export class FzDashboard extends HTMLElement {
                   : (isMg ? "🎙️ Handray feo 1-Kitika" : "🎙️ Enregistrer 1-Clic")
               }
             </span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * MPANAMPY: 30-Second Quick Dictation Methods & Renderer
+   */
+  private startQuickDictation() {
+    this.qdActive = true;
+    this.qdTimeLeft = 30;
+    this.qdUserInput = "";
+    this.qdSubmitted = false;
+    this.qdAccuracyScore = 0;
+
+    const randomIdx = Math.floor(Math.random() * this.qdSentences.length);
+    this.qdTargetPhrase = this.qdSentences[randomIdx];
+
+    if (this.qdTimer) clearInterval(this.qdTimer);
+
+    // Speak sentence immediately
+    if (this.qdTargetPhrase) {
+      const audio = (window as any).feheziko?.audio;
+      if (audio) audio.speakFrench(this.qdTargetPhrase.phrase);
+    }
+
+    this.qdTimer = setInterval(() => {
+      if (this.qdTimeLeft > 1) {
+        this.qdTimeLeft--;
+        const timerLabel = this.querySelector("#qdTimerLabel");
+        const timerBar = this.querySelector("#qdTimerBar") as HTMLElement;
+        if (timerLabel) timerLabel.textContent = `${this.qdTimeLeft}s`;
+        if (timerBar) timerBar.style.width = `${Math.round((this.qdTimeLeft / 30) * 100)}%`;
+      } else {
+        this.qdTimeLeft = 0;
+        clearInterval(this.qdTimer);
+        this.submitQuickDictation();
+      }
+    }, 1000);
+
+    this.render();
+  }
+
+  private submitQuickDictation() {
+    if (this.qdTimer) clearInterval(this.qdTimer);
+    this.qdSubmitted = true;
+
+    if (this.qdTargetPhrase) {
+      const inputEl = this.querySelector("#qdInput") as HTMLInputElement;
+      if (inputEl) this.qdUserInput = inputEl.value;
+
+      const target = this.qdTargetPhrase.phrase.toLowerCase().trim().replace(/[.,!?;:]/g, "");
+      const input = this.qdUserInput.toLowerCase().trim().replace(/[.,!?;:]/g, "");
+      
+      if (target === input) {
+        this.qdAccuracyScore = 100;
+      } else if (!input) {
+        this.qdAccuracyScore = 0;
+      } else {
+        const targetWords = target.split(/\s+/);
+        const inputWords = input.split(/\s+/);
+        let matches = 0;
+        targetWords.forEach(w => {
+          if (inputWords.includes(w)) matches++;
+        });
+        this.qdAccuracyScore = Math.min(100, Math.round((matches / Math.max(1, targetWords.length)) * 100));
+      }
+
+      const xpEarned = this.qdAccuracyScore >= 80 ? 15 : this.qdAccuracyScore >= 50 ? 10 : 5;
+      this.db.addXp(xpEarned);
+    }
+
+    this.render();
+  }
+
+  private resetQuickDictation() {
+    if (this.qdTimer) clearInterval(this.qdTimer);
+    this.qdActive = false;
+    this.qdSubmitted = false;
+    this.render();
+  }
+
+  private render30sQuickDictationWidget(isMg: boolean): string {
+    if (!this.qdActive) {
+      return `
+        <div class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white rounded-2xl p-5 border border-purple-500/30 shadow-md relative overflow-hidden animate-stagger animate-stagger-delay-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-xl shadow-xs">
+                ✍️
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-extrabold text-sm md:text-base text-white tracking-tight">
+                    ${isMg ? "Dictée Rapide 30s (Fandikana Feo)" : "Dictée Rapide 30 Secondes"}
+                  </h3>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+                    ⏱️ 30 sec
+                  </span>
+                </div>
+                <p class="text-[11px] text-purple-200/80 mt-0.5">
+                  ${isMg ? "Hainoy ny feo frantsay vao vakina ary soraty ao anatin'ny 30 segondra." : "Écoutez la phrase dictée et saisissez rapidement ce que vous entendez en 30s."}
+                </p>
+              </div>
+            </div>
+
+            <button id="startQdBtn" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all shadow-md hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer">
+              <span>🎧</span>
+              <span>${isMg ? "Hanomboka ny Dictée 30s" : "Lancer la Dictée 30s"}</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    if (this.qdSubmitted) {
+      const isGood = this.qdAccuracyScore >= 70;
+      const xp = this.qdAccuracyScore >= 80 ? 15 : this.qdAccuracyScore >= 50 ? 10 : 5;
+
+      return `
+        <div class="bg-slate-900 text-white rounded-2xl p-5 border ${isGood ? 'border-emerald-500/40' : 'border-amber-500/40'} shadow-lg space-y-4 animate-stagger">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl">${isGood ? '🎉' : '✍️'}</span>
+              <div>
+                <h4 class="font-bold text-sm text-white">${isMg ? "Valin'ny Dictée 30s" : "Résultat de la Dictée 30s"}</h4>
+                <p class="text-xs text-slate-400">${isMg ? "Naoty azonao amin'ny fandikana feo" : "Score d'exactitude de votre saisie"}</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-xl text-xs font-mono font-black ${isGood ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'}">
+              +${xp} XP
+            </span>
+          </div>
+
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">${isMg ? "Fehezanteny marina" : "Phrase modèle"} :</div>
+            <p class="text-base font-extrabold text-amber-300">"${this.qdTargetPhrase?.phrase}"</p>
+            <p class="text-xs text-slate-400 italic">${isMg ? this.qdTargetPhrase?.translationMg : this.qdTargetPhrase?.translationFr}</p>
+            
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
+              <span class="text-slate-400">${isMg ? "Ny nosoratanao" : "Votre réponse"} : <strong class="text-white">"${this.qdUserInput || (isMg ? '(Tsy nisy)' : '(Vide)')}"</strong></span>
+              <span class="font-black text-indigo-300">${this.qdAccuracyScore}% ${isMg ? 'taham-pahamarinana' : 'd\'exactitude'}</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button id="startQdBtn" class="bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs px-4 py-2 rounded-xl transition-all active:scale-95 cursor-pointer">
+              🔄 ${isMg ? "Dictée 30s vaovao" : "Nouvelle Dictée 30s"}
+            </button>
+            <button id="resetQdBtn" class="text-xs text-slate-400 hover:text-white transition-colors cursor-pointer">
+              ✕ ${isMg ? "Katonana" : "Fermer"}
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Active playing state
+    return `
+      <div class="bg-gradient-to-r from-purple-950 via-slate-900 to-indigo-950 text-white rounded-2xl p-5 border border-purple-500/40 shadow-xl space-y-4 animate-stagger">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">✍️</span>
+            <span class="font-extrabold text-sm text-white">${isMg ? "Dictée 30s an-dàlana" : "Session Dictée 30s"}</span>
+          </div>
+
+          <!-- Countdown timer -->
+          <div class="flex items-center space-x-2 bg-black/40 px-3 py-1 rounded-xl border border-white/10 font-mono">
+            <span class="text-amber-400 text-xs font-bold animate-pulse">⏱️</span>
+            <span id="qdTimerLabel" class="text-sm font-black text-white">${this.qdTimeLeft}s</span>
+          </div>
+        </div>
+
+        <!-- Timer progress bar -->
+        <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+          <div id="qdTimerBar" class="bg-gradient-to-r from-amber-400 to-purple-400 h-full transition-all duration-1000 ease-linear" style="width: ${Math.round((this.qdTimeLeft / 30) * 100)}%"></div>
+        </div>
+
+        <div class="bg-slate-950/80 p-4 rounded-xl border border-purple-500/20 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-purple-300 font-semibold">${isMg ? "Henoy tsara ary soraty mivantana :" : "Écoutez l'audio et saisissez la phrase :"}</span>
+            <button id="qdReplayAudioBtn" class="bg-purple-600/30 hover:bg-purple-600/50 text-purple-200 border border-purple-400/30 text-xs font-bold px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 active:scale-95 cursor-pointer">
+              <span>🔊</span>
+              <span>${isMg ? "Averina ny feo" : "Réécouté"}</span>
+            </button>
+          </div>
+
+          <input id="qdInput" type="text" placeholder="${isMg ? "Soraty eto ny teny renay..." : "Tapez ici ce que vous entendez..."}" value="${this.qdUserInput}" class="w-full bg-slate-900 border border-slate-700 focus:border-amber-400 text-white rounded-xl px-4 py-3 text-sm font-medium focus:outline-hidden transition-all shadow-inner" autofocus />
+        </div>
+
+        <div class="flex items-center justify-between pt-1">
+          <button id="resetQdBtn" class="text-xs text-slate-400 hover:text-white transition-colors cursor-pointer">
+            ✕ ${isMg ? "Ajanona" : "Annuler"}
+          </button>
+          <button id="qdSubmitBtn" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black text-xs px-5 py-2.5 rounded-xl transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer">
+            ✓ ${isMg ? "Hamarino" : "Valider la saisie"}
           </button>
         </div>
       </div>

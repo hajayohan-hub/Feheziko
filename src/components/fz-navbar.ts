@@ -152,6 +152,14 @@ export class FzNavbar extends HTMLElement {
               ${progress.accessibility.darkMode ? "☀️" : "🌙"}
             </button>
 
+            <!-- Quick Guided Tour Button -->
+            <button id="quickTourBtn"
+                    class="p-1.5 sm:px-2.5 sm:py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200/80 text-xs font-bold transition-all duration-150 cursor-pointer flex items-center gap-1 text-indigo-700 active:scale-95 shadow-2xs shrink-0"
+                    title="${progress.accessibility.language === "mg" ? "Hagaga ny fampidirana (Tour Gida)" : "Visite guidée interactive (Tour)"}">
+              <span class="text-sm">🧭</span>
+              <span class="hidden lg:inline">${progress.accessibility.language === "mg" ? "Gida" : "Tour"}</span>
+            </button>
+
             <!-- Premium Badge -->
             <div class="cursor-pointer shrink-0" onclick="window.feheziko.navigate('payment')">
               ${
@@ -200,6 +208,11 @@ export class FzNavbar extends HTMLElement {
       }
 
       window.dispatchEvent(new CustomEvent("feheziko_state_changed"));
+    });
+
+    // Add event listener to quick tour button
+    this.querySelector("#quickTourBtn")?.addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("feheziko_start_guided_tour"));
     });
   }
 }

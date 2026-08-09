@@ -947,6 +947,91 @@ export class FzLesson extends HTMLElement {
           </div>
         </div>
 
+        <!-- Guided Learning Flow Roadmap Banner -->
+        <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-5 md:p-6 text-white shadow-xl border border-indigo-500/30 space-y-4 relative overflow-hidden">
+          <div class="absolute -right-6 -top-6 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center space-x-2">
+                <span class="bg-indigo-500/30 text-indigo-300 text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-indigo-400/30 font-mono">
+                  ${isMg ? "Lalan'ny Famoahana Nivel" : "Parcours d'Apprentissage Pas à Pas"}
+                </span>
+                <span class="text-xs font-mono text-slate-400">
+                  ${progress.completedLessons.length} ${isMg ? "lesona vita" : "leçons maîtrisées"}
+                </span>
+              </div>
+              <h3 class="text-lg md:text-xl font-extrabold text-white tracking-tight">
+                ${isMg ? "Ny Dingam-Pianarana ara-Drafitra (A1 → B2)" : "Progression Chronologique Guidée"}
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed max-w-xl">
+                ${isMg 
+                  ? "Araho ara-dalàna ireto dingana ireto mba hahafehezanao tsara ny teny frantsay am-bava sy an-tsoratra ilaina amin'ny fiainana andavanandro."
+                  : "Suivez ces étapes dans l'ordre chronologique recommandé pour consolider votre grammaire et maîtriser la prononciation."}
+              </p>
+            </div>
+
+            <!-- Global Step Counter Badge -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl flex items-center space-x-3 shrink-0">
+              <span class="text-3xl">🧭</span>
+              <div>
+                <span class="text-[10px] uppercase font-mono font-bold text-indigo-300 block">
+                  ${isMg ? "Ny Dinganao ankehitriny" : "Votre Étape Actuelle"}
+                </span>
+                <span class="text-base font-black text-white font-mono">
+                  ${isMg ? `Lesona #${progress.completedLessons.length + 1}` : `Étape ${progress.completedLessons.length + 1}`}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step Progression Bar through CEFR Levels -->
+          <div class="pt-3 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            ${content.levels.map((lvl: any, index: number) => {
+              const lvlLessons = lvl.lessons || [];
+              const completedInLvl = lvlLessons.filter((les: any) => progress.completedLessons.includes(les.id)).length;
+              const isLvlDone = lvlLessons.length > 0 && completedInLvl === lvlLessons.length;
+              const isLvlActive = !isLvlDone && (index === 0 || (content.levels[index - 1]?.lessons || []).some((les: any) => progress.completedLessons.includes(les.id)));
+
+              let statusStyle = "bg-white/5 border-white/10 text-slate-400";
+              let badgeLabel = isMg ? "Mbola hiakatra" : "À venir";
+
+              if (isLvlDone) {
+                statusStyle = "bg-emerald-500/20 border-emerald-400/40 text-emerald-200";
+                badgeLabel = isMg ? "Vita ✓" : "Maîtrisé ✓";
+              } else if (isLvlActive) {
+                statusStyle = "bg-amber-400/20 border-amber-400/50 text-amber-200 ring-2 ring-amber-400/30";
+                badgeLabel = isMg ? "Efa an-dàlana ⚡" : "En cours ⚡";
+              }
+
+              return `
+                <div class="p-3 rounded-2xl border ${statusStyle} flex flex-col justify-between transition-all">
+                  <div>
+                    <div class="flex items-center justify-between mb-1">
+                      <span class="text-[10px] font-black uppercase tracking-wider font-mono px-1.5 py-0.5 rounded bg-black/30">
+                        ${lvl.id}
+                      </span>
+                      <span class="text-[9px] font-bold font-mono px-1.5 py-0.5 rounded-full bg-white/10">
+                        ${badgeLabel}
+                      </span>
+                    </div>
+                    <p class="text-xs font-bold text-white line-clamp-1 mt-1">${lvl.title.split(":")[0] || lvl.title}</p>
+                  </div>
+                  <div class="mt-2.5">
+                    <div class="flex justify-between items-center text-[10px] font-mono text-slate-300 mb-1">
+                      <span>${completedInLvl}/${lvlLessons.length} ${isMg ? "lesona" : "leçons"}</span>
+                      <span>${lvlLessons.length > 0 ? Math.round((completedInLvl / lvlLessons.length) * 100) : 0}%</span>
+                    </div>
+                    <div class="w-full bg-black/40 rounded-full h-1.5 overflow-hidden">
+                      <div class="bg-gradient-to-r from-indigo-400 to-amber-400 h-full rounded-full transition-all duration-500" style="width: ${lvlLessons.length > 0 ? (completedInLvl / lvlLessons.length) * 100 : 0}%"></div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </div>
+
         <!-- Favorites Section if any exist -->
         ${bookmarkedLessons.length > 0 ? `
           <div class="bg-indigo-50/50 border border-indigo-100 rounded-3xl p-5 space-y-4 shadow-xs">
@@ -1038,32 +1123,71 @@ export class FzLesson extends HTMLElement {
         <div class="space-y-8">
     `;
 
+    // Flatten all lessons to identify the exact recommended next step
+    const allFlatLessons: any[] = [];
+    content.levels.forEach((l: any) => allFlatLessons.push(...(l.lessons || [])));
+    const firstIncompleteLesson = allFlatLessons.find((l: any) => !progress.completedLessons.includes(l.id));
+    const nextRecommendedId = firstIncompleteLesson ? firstIncompleteLesson.id : null;
+
+    let globalStepCounter = 0;
+
     content.levels.forEach((lvl: any) => {
       html += `
         <div class="space-y-4">
-          <div class="border-b border-slate-200 pb-2">
-            <h3 class="text-lg font-extrabold text-slate-800">${lvl.title}</h3>
-            <p class="text-xs text-slate-500 mt-0.5">${lvl.description}</p>
+          <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+            <div>
+              <h3 class="text-lg font-extrabold text-slate-800">${lvl.title}</h3>
+              <p class="text-xs text-slate-500 mt-0.5">${lvl.description}</p>
+            </div>
+            <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+              Niveau ${lvl.id}
+            </span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       `;
 
       lvl.lessons.forEach((les: any) => {
+        globalStepCounter++;
         const isCompleted = progress.completedLessons.includes(les.id);
         const isCached = this.db.isLessonCached(les.id);
         const isCaching = this.cachingIds.includes(les.id);
+        const isNextStep = les.id === nextRecommendedId;
+
+        const cardContainerStyle = isNextStep
+          ? "bg-gradient-to-br from-indigo-50/90 via-white to-amber-50/40 border-2 border-indigo-500 shadow-lg ring-2 ring-indigo-500/20 relative"
+          : isCompleted
+            ? "bg-white border border-emerald-200/80 hover:border-emerald-400 p-5 rounded-2xl transition-all shadow-xs flex flex-col justify-between"
+            : "bg-white border border-slate-200 hover:border-indigo-400 p-5 rounded-2xl transition-all shadow-xs flex flex-col justify-between";
 
         html += `
-          <div class="bg-white border border-slate-200 hover:border-indigo-400 p-5 rounded-2xl transition-all shadow-xs flex flex-col justify-between">
+          <div class="${cardContainerStyle} p-5 rounded-2xl flex flex-col justify-between">
+            ${isNextStep ? `
+              <div class="absolute -top-3 left-4 bg-gradient-to-r from-indigo-600 to-amber-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md flex items-center gap-1 font-mono">
+                <span>⚡</span>
+                <span>${isMg ? "DINGANA MANARAKA (PROCHAINE ÉTAPE)" : "PROCHAINE ÉTAPE RECOMMANDÉE"}</span>
+              </div>
+            ` : ""}
+
             <div>
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-1.5">
+              <div class="flex justify-between items-center ${isNextStep ? "mt-1" : ""}">
+                <div class="flex items-center space-x-1.5 flex-wrap gap-y-1">
                   <!-- Bookmark Button -->
                   <button data-id="${les.id}" class="bookmarkToggleBtn text-base transition-all hover:scale-110 active:scale-95 cursor-pointer mr-1" title="${this.db.isLessonBookmarked(les.id) ? "Fafao amin'ny tianao (Retirer des favoris)" : "Tehirizo ho tianao (Ajouter aux favoris)"}">
                     ${this.db.isLessonBookmarked(les.id) ? "🔖" : "🏷️"}
                   </button>
+
+                  <!-- Step Number Badge -->
+                  <span class="bg-slate-900 text-white text-[10px] font-mono font-black px-2 py-0.5 rounded-md">
+                    ${isMg ? `Dingana ${globalStepCounter}` : `Étape ${globalStepCounter}`}
+                  </span>
+
                   <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded font-mono">+${les.xp} XP</span>
+                  
+                  <span class="text-[10px] text-slate-400 font-mono font-semibold flex items-center gap-0.5">
+                    ⏱️ 10 min
+                  </span>
+
                   ${
                     isCompleted
                       ? `<span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-100">✓ ${t.completed}</span>`
@@ -1390,55 +1514,203 @@ export class FzLesson extends HTMLElement {
 
     let mainCardHtml = "";
 
-    // Step 1: Introduction Screen
+    // Step 1: Introduction & Interactive Grammar Screen
     if (this.activeStep === "intro") {
       const comm = this.currentLesson.content.commentary;
+      const grammar = this.currentLesson.content.grammar;
+      const speed = this.audio.getPlaybackSpeed();
+
       mainCardHtml = `
-        <div class="space-y-6">
-          <span class="text-4xl">📖</span>
-          <h3 class="text-xl md:text-2xl font-bold text-slate-800 leading-snug">${this.currentLesson.title}</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">${this.currentLesson.content.introduction}</p>
-          
-          <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-5 space-y-3">
-            <h4 class="font-bold text-indigo-900 text-sm">💡 Fitsipi-pitenenana (Règle Grammaticale) : ${this.currentLesson.content.grammar.title}</h4>
-            <p class="text-xs text-indigo-700 leading-relaxed">${this.currentLesson.content.grammar.rule}</p>
-            <div class="space-y-1.5 pt-2">
-              ${this.currentLesson.content.grammar.examples
-                .map((ex: string) => `<p class="text-xs font-mono font-semibold text-indigo-900 bg-white/60 p-2 rounded-lg border border-indigo-100/30">✓ ${this.highlightPhoneticWords(ex, isMg)}</p>`)
-                .join("")}
+        <div class="space-y-6 animate-stagger">
+          <!-- Lesson Header with Icon & Speed Control -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl shadow-md shadow-indigo-200 shrink-0">
+                📖
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-wider text-indigo-600 font-mono bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-100">
+                  ${isMg ? "Lesona Fitsipi-pitenenana" : "Leçon de Grammaire Interactive"}
+                </span>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight mt-0.5">${this.currentLesson.title}</h3>
+              </div>
+            </div>
+
+            <!-- Audio Speed & Quick Listen Controls -->
+            <div class="flex items-center space-x-2 bg-slate-50 p-1.5 rounded-2xl border border-slate-200/60 shrink-0">
+              <span class="text-[10px] font-bold text-slate-400 font-mono px-1">🔊 ${isMg ? "Hafainganana:" : "Vitesse:"}</span>
+              <button class="audioSpeedBtn px-2.5 py-1 rounded-xl text-[10px] font-black font-mono transition-all cursor-pointer ${speed === 0.5 ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'}" data-speed="0.5">0.5x</button>
+              <button class="audioSpeedBtn px-2.5 py-1 rounded-xl text-[10px] font-black font-mono transition-all cursor-pointer ${speed === 0.75 ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'}" data-speed="0.75">0.75x</button>
+              <button class="audioSpeedBtn px-2.5 py-1 rounded-xl text-[10px] font-black font-mono transition-all cursor-pointer ${speed === 1.0 ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'}" data-speed="1.0">1.0x</button>
             </div>
           </div>
 
+          <!-- Introduction text card -->
+          <p class="text-sm text-slate-600 leading-relaxed font-medium bg-slate-50/70 p-4 rounded-2xl border border-slate-200/50">
+            ${this.currentLesson.content.introduction}
+          </p>
+          
+          <!-- Interactive Grammar Main Rule Card -->
+          <div class="bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 shadow-xl border border-indigo-500/30 space-y-4 relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-36 h-36 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="flex items-center space-x-2">
+                <span class="bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full font-mono">
+                  💡 ${isMg ? "FITSIPIKA AINGAN'NY FIANARANA" : "RÈGLE FONDAMENTALE"}
+                </span>
+              </div>
+
+              <!-- Main Grammar Audio Trigger -->
+              <button id="playGrammarRuleAudioBtn" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-bold px-3.5 py-2 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0 shadow-sm active:scale-95">
+                <span>🔊</span>
+                <span>${isMg ? "Mihaino ny fitsipika" : "Écouter la règle"}</span>
+              </button>
+            </div>
+
+            <h4 class="text-lg md:text-xl font-extrabold text-amber-300 leading-snug">
+              ${grammar.title}
+            </h4>
+
+            <p class="text-xs md:text-sm text-indigo-100 leading-relaxed font-sans bg-black/30 p-4 rounded-2xl border border-white/10">
+              ${grammar.rule}
+            </p>
+          </div>
+
+          <!-- Interactive Grammar Examples Showcase -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="font-extrabold text-slate-800 text-sm flex items-center gap-2">
+                <span>💬</span>
+                <span>${isMg ? "Ohatra mihetsika amin'ny feo & fandinihana" : "Exemples interactifs & prononciation"}</span>
+              </h4>
+              <span class="text-[10px] font-mono text-indigo-600 bg-indigo-50 font-bold px-2 py-0.5 rounded-full border border-indigo-100">
+                ${grammar.examples.length} ${isMg ? "ohatra" : "exemples"}
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+              ${grammar.examples.map((ex: string, idx: number) => `
+                <div class="bg-white border border-slate-200/80 hover:border-indigo-400 rounded-2xl p-4 transition-all shadow-2xs hover:shadow-md space-y-3 group">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center space-x-3 flex-1 min-w-0">
+                      <!-- Play Audio Button for Example -->
+                      <button data-text="${ex}" class="playGrammarExampleAudioBtn w-10 h-10 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white flex items-center justify-center text-lg transition-all shadow-xs cursor-pointer shrink-0 active:scale-95" title="${isMg ? "Mihaino ny feon'ity ohatra ity" : "Écouter cet exemple"}">
+                        🔊
+                      </button>
+
+                      <div class="space-y-0.5 min-w-0 flex-1">
+                        <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Ohatra #${idx + 1}</span>
+                        <p class="text-sm font-extrabold text-slate-900 tracking-tight leading-snug">
+                          ${this.highlightPhoneticWords(ex, isMg)}
+                        </p>
+                      </div>
+                    </div>
+
+                    <button data-idx="${idx}" class="toggleGrammarAnalysisBtn text-[10px] font-mono font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1.5 rounded-xl border border-indigo-100 transition-all cursor-pointer shrink-0">
+                      🔍 ${isMg ? "Rafi-pehezanteny" : "Structure"}
+                    </button>
+                  </div>
+
+                  <!-- Expandable Structural Breakdown / Analysis -->
+                  <div id="grammarAnalysisContainer-${idx}" class="hidden bg-slate-50 p-3 rounded-xl border border-slate-200/60 text-xs font-mono space-y-1.5 animate-fade-in">
+                    <span class="text-[10px] font-bold text-indigo-900 uppercase block tracking-wider">📊 ${isMg ? "Famakafakana ny rafitra (Analyse grammaticale) :" : "Analyse de la structure :"}</span>
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                      ${ex.split(/\s+/).map((word, wIdx) => {
+                        let badgeColor = "bg-slate-200 text-slate-800";
+                        if (wIdx === 0) badgeColor = "bg-blue-100 text-blue-800 border-blue-200";
+                        else if (wIdx === 1) badgeColor = "bg-amber-100 text-amber-900 border-amber-200 font-bold";
+                        else badgeColor = "bg-emerald-100 text-emerald-900 border-emerald-200";
+                        return `<span class="px-2 py-0.5 rounded-lg border text-[11px] font-bold ${badgeColor}">${word}</span>`;
+                      }).join("")}
+                    </div>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- Interactive Grammar Quick Check / Mini-Challenge -->
+          ${(() => {
+            const firstExample = grammar.examples[0] || "Je parle français.";
+            return `
+              <div class="bg-gradient-to-br from-amber-50/90 via-orange-50/50 to-white border border-amber-200/90 rounded-2xl p-5 space-y-3.5 shadow-xs">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-xl">⚡</span>
+                    <h4 class="font-extrabold text-amber-950 text-sm">
+                      ${isMg ? "Fampiharana Haingana : Fitsipika am-pampiasana" : "Test Rapide : Application de la Règle"}
+                    </h4>
+                  </div>
+                  <span class="text-[10px] font-mono font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
+                    +5 XP
+                  </span>
+                </div>
+
+                <p class="text-xs text-amber-900 font-medium">
+                  ${isMg ? "Soraty na tsindrio ny fehezanteny manaraka tsara ity fitsipika ity :" : "Choisissez la forme correcte qui applique la règle :"}</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                  <button data-correct="true" data-text="${firstExample}" class="grammarQuickPracticeOptionBtn bg-white hover:bg-emerald-50 text-slate-800 hover:text-emerald-900 border border-slate-200 hover:border-emerald-400 p-3 rounded-xl text-xs font-bold text-left transition-all cursor-pointer flex items-center justify-between group shadow-2xs">
+                    <span>1. ${firstExample}</span>
+                    <span class="opacity-0 group-hover:opacity-100 text-emerald-600 transition-opacity">🔊</span>
+                  </button>
+
+                  <button data-correct="false" data-text="${firstExample}" class="grammarQuickPracticeOptionBtn bg-white hover:bg-rose-50 text-slate-800 hover:text-rose-900 border border-slate-200 hover:border-rose-400 p-3 rounded-xl text-xs font-bold text-left transition-all cursor-pointer flex items-center justify-between group shadow-2xs">
+                    <span>2. ${firstExample.toLowerCase().replace(/e\b/, 'es')}</span>
+                    <span class="opacity-0 group-hover:opacity-100 text-rose-500 transition-opacity">❌</span>
+                  </button>
+                </div>
+
+                <div id="grammarQuickPracticeFeedback" class="hidden p-3 rounded-xl text-xs font-bold transition-all"></div>
+              </div>
+            `;
+          })()}
+
           <!-- Teacher Commentary & Pedagogical Notes -->
           ${comm ? `
-            <div class="bg-amber-50/80 border border-amber-200/90 rounded-2xl p-5 space-y-3 shadow-xs">
-              <div class="flex items-center space-x-2">
-                <span class="text-xl">✍️</span>
-                <h4 class="font-extrabold text-amber-950 text-sm">${isMg ? "Fanamarihana & Soso-kevitry ny Mpampianatra" : "Commentaires & Remarques Pédagogiques"}</h4>
+            <div class="bg-slate-900 text-white rounded-3xl p-5 md:p-6 space-y-4 shadow-xl border border-slate-800">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center space-x-2">
+                  <span class="text-xl">🎓</span>
+                  <h4 class="font-extrabold text-indigo-300 text-sm">${isMg ? "Soso-kevitry ny Mpampianatra & Fitenenana" : "Conseils du Professeur & Culture"}</h4>
+                </div>
+                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-bold">Pédagogie</span>
               </div>
-              ${comm.teacher_notes ? `
-                <div class="bg-white/90 p-3.5 rounded-xl border border-amber-200/60 space-y-1">
-                  <span class="text-[10px] font-extrabold text-amber-900 uppercase tracking-wider block">🎓 ${isMg ? "Fanamarihan'ny mpampianatra" : "Note du professeur"}</span>
-                  <p class="text-xs text-amber-950 leading-relaxed font-medium">${comm.teacher_notes}</p>
-                </div>
-              ` : ''}
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                ${comm.teacher_notes ? `
+                  <div class="bg-slate-800/90 p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+                    <span class="text-[10px] font-extrabold text-amber-300 uppercase tracking-wider block font-mono">💡 ${isMg ? "Note du professeur" : "Note Pédagogique"}</span>
+                    <p class="text-xs text-slate-200 leading-relaxed font-medium">${comm.teacher_notes}</p>
+                  </div>
+                ` : ''}
+
+                ${comm.pronunciation_tip ? `
+                  <div class="bg-slate-800/90 p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-extrabold text-indigo-300 uppercase tracking-wider block font-mono">🗣️ ${isMg ? "Fomba fitenenana" : "Astuce de Prononciation"}</span>
+                      <button data-text="${comm.pronunciation_tip}" class="playGrammarExampleAudioBtn text-[10px] text-indigo-300 hover:text-white bg-indigo-500/20 px-2 py-0.5 rounded-md border border-indigo-500/30 font-bold transition-all cursor-pointer">
+                        🔊 ${isMg ? "Mihaino" : "Écouter"}
+                      </button>
+                    </div>
+                    <p class="text-xs text-slate-200 leading-relaxed font-medium">${comm.pronunciation_tip}</p>
+                  </div>
+                ` : ''}
+              </div>
+
               ${comm.cultural_tip ? `
-                <div class="bg-white/90 p-3.5 rounded-xl border border-amber-200/60 space-y-1">
-                  <span class="text-[10px] font-extrabold text-emerald-800 uppercase tracking-wider block">🇲🇬 ${isMg ? "Mombamomba ny kolontsaina" : "Conseil culturel"}</span>
-                  <p class="text-xs text-slate-800 leading-relaxed font-medium">${comm.cultural_tip}</p>
-                </div>
-              ` : ''}
-              ${comm.pronunciation_tip ? `
-                <div class="bg-white/90 p-3.5 rounded-xl border border-amber-200/60 space-y-1">
-                  <span class="text-[10px] font-extrabold text-indigo-800 uppercase tracking-wider block">🗣️ ${isMg ? "Fomba fitenenana" : "Astuce de prononciation"}</span>
-                  <p class="text-xs text-slate-800 leading-relaxed font-medium">${comm.pronunciation_tip}</p>
+                <div class="bg-slate-800/60 p-4 rounded-2xl border border-slate-700/50 space-y-1">
+                  <span class="text-[10px] font-extrabold text-emerald-300 uppercase tracking-wider block font-mono">🇲🇬 ${isMg ? "Mombamomba ny kolontsaina" : "Conseil Culturel & Contexte"}</span>
+                  <p class="text-xs text-slate-300 leading-relaxed font-medium">${comm.cultural_tip}</p>
                 </div>
               ` : ''}
             </div>
           ` : ''}
           
-          <button id="playerNextBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition-colors shadow-md shadow-indigo-100 mt-6 cursor-pointer">
-            ${t.next} →
+          <button id="playerNextBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-3.5 rounded-2xl transition-all shadow-lg shadow-indigo-500/20 hover:scale-[1.01] active:scale-95 cursor-pointer flex items-center justify-center gap-2 text-sm">
+            <span>${t.next}</span>
+            <span>→</span>
           </button>
         </div>
       `;
@@ -2021,6 +2293,73 @@ export class FzLesson extends HTMLElement {
           </div>
         </div>
 
+        <!-- Interactive 4-Step Learning Flow Stepper Breadcrumb -->
+        <div class="space-y-3">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            ${(() => {
+              const steps = [
+                { id: "intro", num: 1, name: isMg ? "1. Fitsipika" : "1. Grammaire", icon: "📖", desc: isMg ? "Grammaire" : "Grammaire" },
+                { id: "vocab", num: 2, name: isMg ? "2. Voambolana" : "2. Vocabulaire", icon: "🗣️", desc: isMg ? "Vocabulaire" : "Vocabulaire" },
+                { id: "quiz", num: 3, name: isMg ? "3. Exercices" : "3. Exercices", icon: "✍️", desc: isMg ? "Quiz" : "Quiz" },
+                { id: "complete", num: 4, name: isMg ? "4. Bilan" : "4. Bilan", icon: "🏆", desc: isMg ? "Bilan XP" : "Bilan" }
+              ];
+              const stepOrder = ["intro", "vocab", "quiz", "complete"];
+              const currentIdx = stepOrder.indexOf(this.activeStep);
+
+              return steps.map((s, idx) => {
+                const isPassed = idx < currentIdx;
+                const isActive = idx === currentIdx;
+
+                let chipStyle = "bg-slate-100 text-slate-400 border-slate-200/80 cursor-not-allowed opacity-60";
+                if (isPassed) {
+                  chipStyle = "bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border-emerald-200 cursor-pointer shadow-2xs";
+                } else if (isActive) {
+                  chipStyle = "bg-indigo-600 text-white border-indigo-700 shadow-md ring-2 ring-indigo-500/20 font-bold";
+                }
+
+                return `
+                  <button data-step="${s.id}" class="stepBreadcrumbBtn px-3 py-2 rounded-xl border text-xs flex items-center justify-between transition-all ${chipStyle}" ${!isPassed && !isActive ? "disabled" : ""}>
+                    <div class="flex items-center space-x-1.5 truncate">
+                      <span>${isPassed ? "✓" : s.icon}</span>
+                      <span class="truncate text-[11px] font-bold">${s.name}</span>
+                    </div>
+                    ${isActive ? `<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>` : ""}
+                  </button>
+                `;
+              }).join("");
+            })()}
+          </div>
+
+          <!-- Step Goal Explanatory Callout Banner -->
+          <div class="bg-gradient-to-r from-indigo-50/90 to-purple-50/90 border border-indigo-100 rounded-2xl p-3.5 flex items-center gap-3 text-xs shadow-2xs">
+            <span class="text-xl shrink-0">🎯</span>
+            <div class="flex-1">
+              <span class="font-extrabold text-indigo-950 uppercase text-[10px] tracking-wider block font-mono">
+                ${
+                  this.activeStep === "intro" 
+                    ? (isMg ? "DINGANA 1 AMIN'NY 4 : TSY AZO ANATOKA FITSIPIKA" : "ÉTAPE 1 SUR 4 : ÉCOUTE & GRAMMAIRE")
+                    : this.activeStep === "vocab"
+                      ? (isMg ? `DINGANA 2 AMIN'NY 4 : VOAMBOLANA (${this.vocabIndex + 1}/${vocabLength})` : `ÉTAPE 2 SUR 4 : VOCABULAIRE & PRONONCIATION (${this.vocabIndex + 1}/${vocabLength})`)
+                      : this.activeStep === "quiz"
+                        ? (isMg ? `DINGANA 3 AMIN'NY 4 : EXERCICES & PARLER (${this.quizIndex + 1}/${quizLength})` : `ÉTAPE 3 SUR 4 : QUIZ & EXPRESSION ORALE (${this.quizIndex + 1}/${quizLength})`)
+                        : (isMg ? "DINGANA 4 AMIN'NY 4 : BILAN & XP" : "ÉTAPE 4 SUR 4 : VALIDATION & RECOMPENSES")
+                }
+              </span>
+              <p class="text-[11px] text-indigo-900 font-medium leading-snug mt-0.5">
+                ${
+                  this.activeStep === "intro" 
+                    ? (isMg ? "Vakio sy henoy ny fitsipi-pitenenana. Rehefa vonona dia tsindrio ny 'Manaraka' mba handehanana amin'ny voambolana." : "Assimilez la règle grammaticale et écoutez les exemples sonores avant de passer aux exercices.")
+                    : this.activeStep === "vocab"
+                      ? (isMg ? "Henoy tsara ny teny, ny dikan'ny teny sy ny fomba fanononana azy amin'ny feo frantsay." : "Écoutez attentivement la prononciation des mots clés et entraînez votre voix.")
+                      : this.activeStep === "quiz"
+                        ? (isMg ? "Valio ireo fanontaniana mba hahitana raha efa voafehinao ny lesona androany." : "Validez vos connaissances à travers des quiz interactifs et des défis de prononciation.")
+                        : (isMg ? "Arahabaina! Vita soa aman-tsara ny lesona. Tsindrio ny 'Hamita' mba hahazoana XP." : "Félicitations ! Leçon terminée. Cliquez sur 'Terminer' pour enregistrer vos points d'expérience.")
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- Main Card Window with elegant transition -->
         <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/30">
           ${mainCardHtml}
@@ -2035,6 +2374,16 @@ export class FzLesson extends HTMLElement {
     `;
 
     // BIND ACTIONS & DYNAMIC CLICKS
+    this.querySelectorAll(".stepBreadcrumbBtn").forEach((btn: any) => {
+      btn.addEventListener("click", () => {
+        const targetStep = btn.getAttribute("data-step") as any;
+        if (targetStep) {
+          this.activeStep = targetStep;
+          this.render();
+        }
+      });
+    });
+
     this.bindLessonCommentsEvents();
     this.querySelector("#playerQuickReviewBtn")?.addEventListener("click", () => {
       quickReviewService.openQuickReviewModal();
@@ -2265,6 +2614,60 @@ export class FzLesson extends HTMLElement {
         const speedVal = parseFloat(btn.getAttribute("data-speed") || "1.0");
         this.audio.setPlaybackSpeed(speedVal);
         this.renderLessonPlayer(); // Refresh UI to update speed selection state
+      });
+    });
+
+    // Interactive Grammar Action Listeners
+    this.querySelector("#playGrammarRuleAudioBtn")?.addEventListener("click", () => {
+      if (this.currentLesson?.content?.grammar) {
+        const textToSpeak = `${this.currentLesson.content.grammar.title}. ${this.currentLesson.content.grammar.rule}`;
+        this.audio.speakFrench(textToSpeak);
+      }
+    });
+
+    this.querySelectorAll(".playGrammarExampleAudioBtn").forEach((btn: any) => {
+      btn.addEventListener("click", (e: MouseEvent) => {
+        e.stopPropagation();
+        const text = btn.getAttribute("data-text");
+        if (text) {
+          this.audio.speakFrench(text);
+        }
+      });
+    });
+
+    this.querySelectorAll(".toggleGrammarAnalysisBtn").forEach((btn: any) => {
+      btn.addEventListener("click", (e: MouseEvent) => {
+        e.stopPropagation();
+        const idx = btn.getAttribute("data-idx");
+        if (idx !== null) {
+          const container = this.querySelector(`#grammarAnalysisContainer-${idx}`);
+          if (container) {
+            container.classList.toggle("hidden");
+          }
+        }
+      });
+    });
+
+    this.querySelectorAll(".grammarQuickPracticeOptionBtn").forEach((btn: any) => {
+      btn.addEventListener("click", (e: MouseEvent) => {
+        e.stopPropagation();
+        const isCorrect = btn.getAttribute("data-correct") === "true";
+        const text = btn.getAttribute("data-text");
+        const feedbackEl = this.querySelector("#grammarQuickPracticeFeedback");
+
+        if (text) this.audio.speakFrench(text);
+
+        if (feedbackEl) {
+          feedbackEl.classList.remove("hidden", "bg-emerald-50", "text-emerald-900", "border-emerald-200", "bg-rose-50", "text-rose-900", "border-rose-200");
+          if (isCorrect) {
+            this.db.addXp(5);
+            feedbackEl.classList.add("bg-emerald-50", "text-emerald-900", "border", "border-emerald-200");
+            feedbackEl.innerHTML = `🎉 ${isMg ? "Bravo! Valiny marina. Azonao tsara ny fitsipika! (+5 XP)" : "Bravo ! Réponse correcte, vous maîtrisez la règle ! (+5 XP)"}`;
+          } else {
+            feedbackEl.classList.add("bg-rose-50", "text-rose-900", "border", "border-rose-200");
+            feedbackEl.innerHTML = `❌ ${isMg ? "Azafady, tsy izany indrindra. Avereno vakina ny fitsipika eo ambony." : "Oups ! Regardez attentivement la règle ci-dessus."}`;
+          }
+        }
       });
     });
   }
