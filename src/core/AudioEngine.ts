@@ -53,6 +53,7 @@ export class AudioEngine {
   private favoriteAudioCache: Map<string, SharedArrayBuffer | ArrayBuffer> = new Map();
   private lastRecordedSpectrum: Float32Array | null = null;
   private playbackSpeed: number = 1.0;
+  private hasPreloadedAudioOnWifi: boolean = false;
 
   constructor() {
     this.initVoice();
@@ -68,9 +69,11 @@ export class AudioEngine {
     if (typeof window === "undefined" || typeof navigator === "undefined") return;
 
     const checkAndTriggerPreload = () => {
+      if (this.hasPreloadedAudioOnWifi) return;
       const isWifi = this.isWifiConnected();
-      console.log(`[AudioEngine Network] Checking connection status... Connected to Wi-Fi: ${isWifi}`);
       if (isWifi) {
+        this.hasPreloadedAudioOnWifi = true;
+        console.log(`[AudioEngine Network] Wi-Fi connection confirmed. Preloading core audio assets via Service Worker.`);
         this.triggerSwAudioPreloadOnWifi();
       }
     };
