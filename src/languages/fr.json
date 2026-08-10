@@ -51,18 +51,18 @@
           },
           "objectives": {
             "fr": [
-              "Reconnaître les 26 lettres de l'alphabet français",
-              "Prononcer correctement les voyelles simples (a, e, i, o, u)",
-              "Épeler son nom et son prénom en français"
+              "Reconnaître et prononcer les 26 lettres de l'alphabet français",
+              "Distinguer la prononciation des voyelles simples (a, e, i, o, u)",
+              "Épeler son nom, prénom et ville de résidence"
             ],
             "mg": [
-              "Hahafantatra ny litera 26 amin'ny abidy frantsay",
-              "Hanonona tsara ny zana-peo tsotra (a, e, i, o, u)",
-              "Hanolotra ny tsipitsipiky ny anarana (épeler)"
+              "Hahafantatra sy hanonona tsara ny litera 26 amin'ny abidy frantsay",
+              "Haseho ny fahasamihafan'ny fanononana ny zana-peo tsotra (a, e, i, o, u)",
+              "Hanolotra am-bava ny litera amin'ny anarana sy tanàna itriarana (épeler)"
             ]
           },
           "content": {
-            "introduction": "Amin'ity lesona voalohany ity dia hianatra ny abidy frantsay sy ny fanononana ny zana-peo fototra ianao. Hianatra manonona ny anaranao amin me litera (épeler) koa ianao.",
+            "introduction": "Amin'ity lesona voalohany ity dia hianatra ny abidy frantsay sy ny fanononana ny zana-peo fototra ianao. Hianatra manonona ny anaranao amin'ny litera (épeler) koa ianao, izay ilaina amin'ny fandraisana anarana ara-panjakana sy fiainana andavanandro.",
             "vocabulary": [
               {
                 "word": "L'alphabet",
@@ -204,7 +204,7 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Pila zana-peo firy ny abidy frantsay ?",
+                "question": "Pila zana-peo (voyelles) firy ny abidy frantsay ?",
                 "options": [
                   "5 voyelles",
                   "6 voyelles",
@@ -223,6 +223,17 @@
                   "Mihira"
                 ],
                 "answer": "Hanonona isam-litera"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Ahoana no fanononana ny litera 'U' amin'ny teny frantsay ?",
+                "options": [
+                  "Mitovy amin'ny 'OU' malagasy",
+                  "[y] Molotra boribory ary lela aloha",
+                  "Mitovy amin'ny 'I' malagasy",
+                  "Tsy tononina mihitsy"
+                ],
+                "answer": "[y] Molotra boribory ary lela aloha"
               }
             ],
             "review": {
@@ -417,6 +428,17 @@
                   "[pɔ̃]"
                 ],
                 "answer": "[pɛ̃]"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Feo an-orona inona no ao amin'ny teny 'Maison' ?",
+                "options": [
+                  "ON [ɔ̃]",
+                  "AN [ɑ̃]",
+                  "IN [ɛ̃]",
+                  "UN [œ̃]"
+                ],
+                "answer": "ON [ɔ̃]"
               }
             ],
             "review": {
@@ -454,14 +476,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Les voyelles nasales: AN, IN, ON, UN (Ny zana-peo mikoriana amin'ny orona)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Identifier les 4 voyelles nasales du français ([ɑ̃], [ɛ̃], [ɔ̃], [œ̃])",
+              "Prononcer correctement les sons nasaux sans prononcer la consonne N/M finale",
+              "Distinguer la différence entre voyelle orale et voyelle nasale"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Les voyelles nasales: AN, IN, ON, UN (Ny zana-peo mikoriana amin'ny orona)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hahafantatra ny feo an-orona 4 amin'ny teny frantsay",
+              "Hanonona tsara ny feo an-orona tsy mikasika ny N na M amin'ny farany",
+              "Haseho ny fahasamihafan'ny zana-peo vava sy ny zana-peo an-orona"
             ]
           }
         },
@@ -499,14 +521,14 @@
                 "phonetic": "la ljɛzɔ̃",
                 "ipa": "[la ljɛ.zɔ̃]",
                 "translation": "Ny fifandraisam-peo eo amin'ny teny roa",
-                "example": "Les_amis [le.za.mi].",
+                "example": "Les‿amis [le.za.mi].",
                 "example_translation": "Ireo namana (akambana ny feo S hihodina Z).",
                 "priority": "essential"
               }
             ],
             "pronunciation": [
               {
-                "target": "Les_amis [le.za.mi]",
+                "target": "Les‿amis [le.za.mi]",
                 "ipa": "[z]",
                 "difficulty": "Moyen",
                 "advice_mg": "Ny litera 'S' amin'ny faran'ny 'Les' dia lasa feo 'Z' [z] rehefa misy voyelle amin'ny teny manaraka.",
@@ -521,7 +543,7 @@
               "explanation_fr": "Les consonnes finales sont muettes sauf lors des liaisons obligatoires.",
               "examples": [
                 "Un petit_enfant [œ̃ pə.ti.tɑ̃.fɑ̃] (Liaison en T)",
-                "Les_amis [le.za.mi] (Liaison en Z)",
+                "Les‿amis [le.za.mi] (Liaison en Z)",
                 "Deux_heures [dø.zœʁ] (Liaison en Z)"
               ],
               "frequent_errors": [
@@ -583,8 +605,8 @@
               },
               "speaking": {
                 "title": "Pratique des liaisons",
-                "instruction_fr": "Dites: Les_enfants, deux_ans, trois_heures.",
-                "instruction_mg": "Lazao: Les_enfants, deux_ans, trois_heures."
+                "instruction_fr": "Dites: Les‿enfants, deux‿ans, trois‿heures.",
+                "instruction_mg": "Lazao: Les‿enfants, deux‿ans, trois‿heures."
               },
               "reading": {
                 "title": "Lecture à haute voix",
@@ -598,7 +620,7 @@
               },
               "shadowing": {
                 "title": "Répétition",
-                "phrase_fr": "Vous_avez deux_enfants.",
+                "phrase_fr": "Vous‿avez deux_enfants.",
                 "phrase_mg": "Misy zanaka roa ianao."
               }
             },
@@ -613,6 +635,17 @@
                   "[les.a.mis]"
                 ],
                 "answer": "[le.za.mi]"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Tononina ve ny litera 'T' amin'ny faran'ny teny 'Petit' (masculin) ?",
+                "options": [
+                  "Tsy tononina mihitsy izy (mangina)",
+                  "Tononina foana izy",
+                  "Tononina fotsiny raha misy zana-peo (voyelle) aoriana",
+                  "Tononina amin'ny teny malagasy"
+                ],
+                "answer": "Tononina fotsiny raha misy zana-peo (voyelle) aoriana"
               }
             ],
             "review": {
@@ -623,13 +656,13 @@
               ],
               "key_structures": [
                 "Comment allez-vous ?",
-                "Les_enfants"
+                "Les‿enfants"
               ],
               "common_mistakes": [
                 "Prononcer le S final dans 'les'"
               ],
               "model_sentences": [
-                "Les_élèves ont deux_ans."
+                "Les_élèves ont deux‿ans."
               ]
             },
             "assessment": {
@@ -649,14 +682,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Consonnes finales muettes et liaisons (Ny litera mangina sy ny fifandraisam-peo)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Reconnaître les consonnes finales habituellement muettes (E, S, T, D, X, P)",
+              "Appliquer correctement la liaison obligatoire devant une voyelle (ex: les‿amis)",
+              "Éviter de prononcer les consonnes finales silencieuses"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Consonnes finales muettes et liaisons (Ny litera mangina sy ny fifandraisam-peo)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hahafantatra ny reny feo amin'ny faran'ny teny izay tsy tononina (E, S, T, D, X, P)",
+              "Hampiasa tsara ny fifandraisam-peo obligatoire rehefa misy zana-peo aoriana (ex: les‿amis)",
+              "Hanafoana ny fahalalana hanonona litera mangina"
             ]
           }
         },
@@ -694,7 +727,7 @@
                 "ipa": "[la tabl]",
                 "translation": "Ny latabatra",
                 "example": "Le livre est sur la table.",
-                "example_translation": "A visualizina eo ambonin'ny latabatra ny boky.",
+                "example_translation": "Apetraka eo ambonin'ny latabatra ny boky.",
                 "priority": "essential"
               },
               {
@@ -817,6 +850,17 @@
                   "Des livre"
                 ],
                 "answer": "Le livre"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Ahoana no hanoratana 'Ny sekoly' amin'ny teny frantsay (voyelle E) ?",
+                "options": [
+                  "L'école",
+                  "Le école",
+                  "La école",
+                  "Les école"
+                ],
+                "answer": "L'école"
               }
             ],
             "review": {
@@ -854,14 +898,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Lecture fluide de mots courants (Vakiteny sy fanononana fitaovana)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Lire de façon fluide des mots courants de la classe et de la maison",
+              "Distinguer le genre des mots avec les articles définis (Le, La, L', Les)",
+              "Prononcer correctement le R français [ʁ] uvulaire"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Lecture fluide de mots courants (Vakiteny sy fanononana fitaovana)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mamaky an-tsakany sy an-davany ireo teny fampiasa amin'ny kilasy sy trano",
+              "Hanamarika ny 'genre' (Le, La, L', Les) amin'ny teny frantsay",
+              "Hanonona tsara ny R frantsay [ʁ] avy ao amin'ny tenda"
             ]
           }
         }
@@ -892,18 +936,14 @@
           },
           "objectives": {
             "fr": [
-              "Saluer quelqu'un selon le moment de la journée",
-              "Se présenter en disant son prénom et son nom",
-              "Demander le nom d'une personne de façon formelle et informelle",
-              "Demander comment va quelqu'un et répondre simplement",
-              "Utiliser correctement le verbe s'appeler au présent de l'indicatif"
+              "Se présenter en 30 secondes (nom, âge, profession, ville)",
+              "Saluer selon le moment de la journée et le niveau de politesse",
+              "Utiliser les pronoms sujets (Je, Tu, Il, Elle, Nous, Vous, Ils)"
             ],
             "mg": [
-              "Miarahaba olona araka ny fotoana amin'ny andro",
-              "Mampahafantatra tena amin'ny filazana anarana sy fanampiny",
-              "Manontany anaran'olona amin'ny fomba ara-dalàna na tsotra",
-              "Manontany fahasalamana sy mamaly tsotra",
-              "Mampiasa ara-dalàna ny matoanteny s'appeler amin'ny ankehitriny"
+              "Hanolotra ny tena amin'ny 30 segondra (anarana, taona, asa, tanàna)",
+              "Manohatra araka ny fotoana sy ny fombafomba feno fanajana",
+              "Hampiasa tsara ny 'pronoms sujets' (Je, Tu, Il, Elle, Nous, Vous, Ils)"
             ]
           },
           "content": {
@@ -1221,7 +1261,7 @@
         },
         {
           "id": "l2",
-          "title": "Ny fiantsenana sy ny isa (Les achats et les nombres)",
+          "title": "Ny fiantsenana sy ny isa (Les achats, les prix et les nombres)",
           "xp": 60,
           "content": {
             "introduction": "Hianatra hividy zavatra eny an-tsena sy hampiasa ny isa fototra amin'ny teny frantsay.",
@@ -1279,25 +1319,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'Combien ça coûte ?'?",
+                "question": "Ahoana no fanontaniako ny vidin'ny zavatra iray am-panajana ?",
                 "options": [
-                  "Inona izany?",
-                  "Ohatrinona ity?",
-                  "Aiza no misy?",
-                  "Misaotra betsaka"
+                  "C'est combien s'il vous plaît ?",
+                  "Ohatrinona ity ?",
+                  "Donne moi le prix !",
+                  "C'est trop cher !"
                 ],
-                "answer": "Ohatrinona ity?"
+                "answer": "C'est combien s'il vous plaît ?"
               },
               {
                 "type": "translate",
-                "question": "Ahoana no ilazana hoe 'Lafo izany' amin'ny teny frantsay?",
+                "question": "Adika amin'ny teny malagasy: 'Ça coûte 5 000 Ariary'",
                 "options": [
-                  "C'est bon",
-                  "C'est cher",
-                  "C'est gratuit",
-                  "C'est loin"
+                  "5 000 Ariary ny vidiny",
+                  "Mampiasa 5 000 Ariary aho",
+                  "Misy 5 000 Ariary amiko",
+                  "Mitovy 5 000 Ariary ny lanjany"
                 ],
-                "answer": "C'est cher"
+                "answer": "5 000 Ariary ny vidiny"
               }
             ],
             "pronunciation": [
@@ -1320,59 +1360,72 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-              "situation": "Mise en situation réelle pour la leçon: Ny fiantsenana sy ny isa (Les achats et les nombres).",
+              "title": "Au marché d'Analakely",
+              "situation": "Naivo achète des fruits et demande les prix au marchand.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Marchand",
+                  "role": "Vendeur de fruits"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Naivo",
+                  "role": "Acheteur"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Combien ça coûte ?, comment allez-vous ?",
-                  "mg": "Ohatrinona ity ?, manao ahoana ny fahasalamana ?"
+                  "speaker": "Naivo",
+                  "fr": "Bonjour Monsieur ! C'est combien le kilo de bananes ?",
+                  "mg": "Manao ahoana Andriamatoa ! C'est combien ny kilao akondro ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Marchand",
+                  "fr": "Bonjour ! Le kilo de bananes coûte 3 000 Ariary.",
+                  "mg": "Manao ahoana ! 3 000 Ariary ny kilao akondro."
+                },
+                {
+                  "speaker": "Naivo",
+                  "fr": "D'accord, je vais prendre deux kilos s'il vous plaît.",
+                  "mg": "Eny ary, handray kilao roa aho azafady."
+                },
+                {
+                  "speaker": "Marchand",
+                  "fr": "Ça fait 6 000 Ariary en tout. Merci !",
+                  "mg": "6 000 Ariary izany fitambarany. Misaotra !"
                 }
               ],
               "key_vocabulary": [
-                "Combien ça coûte ?"
+                "C'est combien",
+                "Le kilo",
+                "Ça coûte",
+                "Ariary"
               ]
             },
             "activities": {
               "listening": {
-                "title": "Compréhension Orale - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-                "instruction_fr": "Écoutez l'enregistrement et identifiez les éléments clés.",
-                "instruction_mg": "Hainoy ny fandraisam-peo ary valio ny fanontaniana."
+                "title": "Compréhension des prix et nombres",
+                "instruction_fr": "Écoutez les prix dictés (ex: 5 000 Ariary, 12 Euros) et sélectionnez le montant exact.",
+                "instruction_mg": "Hainoy ny vidin'entana vakina ary fidio ny isa marina."
               },
               "speaking": {
-                "title": "Production Orale - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-                "instruction_fr": "Exprimez-vous à voix haute en utilisant les structures de la leçon.",
-                "instruction_mg": "Mitenena amin'ny feo mahery amin'ny fampiasana ny fampianarana."
+                "title": "Demander un prix au marché",
+                "instruction_fr": "Jouez le rôle de l'acheteur : posez la question 'Bonjour, c'est combien le kilo de pommes ?' à voix haute.",
+                "instruction_mg": "Mitenena amin'ny feo mahery : manontania ny vidin'ny paoma."
               },
               "reading": {
-                "title": "Compréhension Écrite - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-                "instruction_fr": "Lisez le texte et repérez les mots importants.",
-                "instruction_mg": "Vakio ny lahatsoratra ary tadiavo ny teny manan-danja."
+                "title": "Lecture de tickets de caisse",
+                "instruction_fr": "Lisez la liste de courses et repérez le total des achats.",
+                "instruction_mg": "Vakio ny lisitry ny fiantsenana ary tadiavo ny fitambarany."
               },
               "writing": {
-                "title": "Production Écrite - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-                "instruction_fr": "Rédigez 2 à 3 phrases courtes sur le sujet.",
-                "instruction_mg": "Manorata fehezanteny fohy 2 na 3 momba ny lohahevitra."
+                "title": "Écriture des nombres en lettres",
+                "instruction_fr": "Écrivez en lettres les nombres suivants : 15, 24, 50, 75.",
+                "instruction_mg": "Soraty amin'ny litera ireto isa ireto."
               },
               "shadowing": {
-                "title": "Pratique de Shadowing - Ny fiantsenana sy ny isa (Les achats et les nombres)",
-                "phrase_fr": "Combien ça coûte, s'il vous plaît ?",
-                "phrase_mg": "Ohatrinona ity, azafady ?"
+                "title": "Répétition de demande de prix",
+                "phrase_fr": "Bonjour, ça coûte combien s'il vous plaît ?",
+                "phrase_mg": "Manao ahoana, ohatrinona ny vidin'ity azafady ?"
               }
             },
             "review": {
@@ -1427,14 +1480,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny fiantsenana sy ny isa (Les achats et les nombres)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Demander le prix d'un article au marché ou en magasin",
+              "Comprendre et énoncer les nombres de 1 à 100",
+              "Utiliser les expressions 'C'est combien ?' et 'Ça coûte combien ?'"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny fiantsenana sy ny isa (Les achats et les nombres)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manontany ny vidin'ny entana eny amin'ny tsena na fivarotana",
+              "Hahafantatra sy hanonona ny isa 1 ka hatramin'ny 100",
+              "Hampiasa ny 'C'est combien ?' sy 'Ça coûte combien ?'"
             ]
           }
         },
@@ -1498,14 +1551,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'Mon père'?",
+                "question": "Inona no adjectif possessif ampiasaina amin'ny 'mère' (féminin singulier) ?",
                 "options": [
-                  "Ny reniko",
-                  "Ny raiko",
-                  "Ny rahalahiko",
-                  "Ny zanako"
+                  "Ma mère",
+                  "Mon mère",
+                  "Mes mère",
+                  "Le mère"
                 ],
-                "answer": "Ny raiko"
+                "answer": "Ma mère"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny frantsay: 'Dokotera ny rahalahiko'",
+                "options": [
+                  "Mon frère est médecin.",
+                  "Ma frère est médecin.",
+                  "Mes frère est médecin.",
+                  "Le frère a médecin."
+                ],
+                "answer": "Mon frère est médecin."
               }
             ],
             "pronunciation": [
@@ -1528,32 +1592,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny fianakaviana sy ny asa (La famille et les métiers)",
-              "situation": "Mise en situation réelle pour la leçon: Ny fianakaviana sy ny asa (La famille et les métiers).",
+              "title": "Présenter sa famille",
+              "situation": "Miora montre une photo de famille à son collègue Jean.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Jean",
+                  "role": "Collègue"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Miora",
+                  "role": "Apprenante"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Père / Mère, comment allez-vous ?",
-                  "mg": "Rai / Reny, manao ahoana ny fahasalamana ?"
+                  "speaker": "Jean",
+                  "fr": "C'est ta famille sur la photo, Miora ?",
+                  "mg": "Ny fianakavianao ve ity amin me sary, Miora ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Miora",
+                  "fr": "Oui ! Voici mon père, il est enseignant, et ma mère est médecin.",
+                  "mg": "Eny ! Ity ny dadako, mpampianatra izy, ary dokotera ny mamako."
+                },
+                {
+                  "speaker": "Jean",
+                  "fr": "Et qui est ce jeune homme à côté de toi ?",
+                  "mg": "Ary iza ity alahatsy kely eo anilanao ity ?"
+                },
+                {
+                  "speaker": "Miora",
+                  "fr": "C'est mon frère cadet. Il est étudiant à l'université.",
+                  "mg": "Anadahiko zandry izany. Mpianatra eny amin me oniversite izy."
                 }
               ],
               "key_vocabulary": [
-                "Père / Mère"
+                "Mon père",
+                "Ma mère",
+                "Mon frère",
+                "Enseignant"
               ]
             },
             "activities": {
@@ -1635,14 +1712,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny fianakaviana sy ny asa (La famille et les métiers)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Présenter les membres de sa famille (père, mère, frère, sœur, enfants)",
+              "Décrire la profession de ses proches (médecin, enseignant, commerçant...)",
+              "Utiliser les adjectifs possessifs (mon, ma, mes, ton, ta, tes)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny fianakaviana sy ny asa (La famille et les métiers)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hanolotra ny mpikambana ao amin'ny fianakaviana",
+              "Hamaritra ny asan me havana (dokotera, mpampianatra, mpivarotra...)",
+              "Hampiasa tsara ny 'adjectifs possessifs' (mon, ma, mes)"
             ]
           }
         },
@@ -1706,25 +1783,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'Il pleut'?",
+                "question": "Ahoana no hilazana hoe 'Misy masoandro anio' ?",
                 "options": [
-                  "Mifofofofo ny wind",
-                  "Avy ny orana",
-                  "Masoandro be",
-                  "Mangatsiaka ny andro"
+                  "Aujourd'hui, il y a du soleil.",
+                  "Aujourd'hui, il fait la pluie.",
+                  "Aujourd'hui, il est froid.",
+                  "Aujourd'hui, c'est la nuit."
                 ],
-                "answer": "Avy ny orana"
+                "answer": "Aujourd'hui, il y a du soleil."
               },
               {
-                "type": "translate",
-                "question": "Adika amin'ny teny frantsay: 'Androany'",
+                "type": "multiple-choice",
+                "question": "Andro inona no aoriana amin me 'Jeudi' (Alarobia -> Alakamisy -> ...) ?",
                 "options": [
-                  "Demain",
-                  "Hier",
-                  "Aujourd'hui",
-                  "Maintenant"
+                  "Vendredi",
+                  "Mercredi",
+                  "Samedi",
+                  "Mardi"
                 ],
-                "answer": "Aujourd'hui"
+                "answer": "Vendredi"
               }
             ],
             "pronunciation": [
@@ -1747,32 +1824,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny andro, ny volana ary ny toetr'andro (Les jours, les mois et la météo)",
-              "situation": "Mise en situation réelle pour la leçon: Ny andro, ny volana ary ny toetr'andro (Les jours, les mois et la météo).",
+              "title": "Demander la date et parler du temps",
+              "situation": "Rivo et Tantely discutent du programme du week-end.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Rivo",
+                  "role": "Ami"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Tantely",
+                  "role": "Amie"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Aujourd'hui / Demain, comment allez-vous ?",
-                  "mg": "Androany / Ampitso, manao ahoana ny fahasalamana ?"
+                  "speaker": "Rivo",
+                  "fr": "Quel jour sommes-nous aujourd'hui, Tantely ?",
+                  "mg": "Andro inona izao anio, Tantely ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Tantely",
+                  "fr": "Aujourd'hui, nous sommes vendredi 15 octobre.",
+                  "mg": "Anio dia zoma 15 oktobra."
+                },
+                {
+                  "speaker": "Rivo",
+                  "fr": "Quel temps fait-il à Tamatave ?",
+                  "mg": "Ahoana ny toetr'andro any Toamasina ?"
+                },
+                {
+                  "speaker": "Tantely",
+                  "fr": "Il fait très chaud et il y a du soleil !",
+                  "mg": "Manoatra ny hafanana ary misy masoandro tsara !"
                 }
               ],
               "key_vocabulary": [
-                "Aujourd'hui / Demain"
+                "Aujourd'hui",
+                "Vendredi",
+                "Il fait chaud",
+                "Le soleil"
               ]
             },
             "activities": {
@@ -1854,14 +1944,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny andro, ny volana ary ny toetr'andro (Les jours, les mois et la météo)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Citer les 7 jours de la semaine et les 12 mois de l'année",
+              "Demander et donner la date du jour (ex: Aujourd'hui, nous sommes le...)",
+              "Décrire le temps qu'il fait (Il fait beau, il pleut, il fait chaud)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny andro, ny volana ary ny toetr'andro (Les jours, les mois et la météo)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hanonona ny andro 7 sy ny volana 12 amin me taona",
+              "Manontany sy milaza ny daty anio",
+              "Hamaritra ny toetr'andro (Masoandro, orana, hafanana)"
             ]
           }
         },
@@ -1925,14 +2015,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana hoe 'Mifoha amin'ny enina maraina aho'?",
+                "question": "Ahoana no hilazana hoe 'Mifoha amin me 6 ora aho' ?",
                 "options": [
-                  "Je dors à 6 heures",
-                  "Je me lève à six heures du matin",
-                  "Je mange à 6 heures",
-                  "Je pars à 6 heures"
+                  "Je me lève à 6 heures.",
+                  "Je me couche à 6 heures.",
+                  "Je mange à 6 heures.",
+                  "Je me lave à 6 heures."
                 ],
-                "answer": "Je me lève à six heures du matin"
+                "answer": "Je me lève à 6 heures."
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'La cuisine'",
+                "options": [
+                  "Ny lakozia",
+                  "Ny efitrano fandriana",
+                  "Ny fidiovana",
+                  "Ny tsena"
+                ],
+                "answer": "Ny lakozia"
               }
             ],
             "pronunciation": [
@@ -1955,32 +2056,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny trano sy ny fiainana andro ampy (La maison et les activités quotidiennes)",
-              "situation": "Mise en situation réelle pour la leçon: Ny trano sy ny fiainana andro ampy (La maison et les activités quotidiennes).",
+              "title": "Raconter sa journée",
+              "situation": "Hery raconte sa routine du matin à sa voisine.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Voisine",
+                  "role": "Interlocutrice"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Hery",
+                  "role": "Voisin"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "La maison / La chambre, comment allez-vous ?",
-                  "mg": "Ny trano / Ny efitrano fandriana, manao ahoana ny fahasalamana ?"
+                  "speaker": "Voisine",
+                  "fr": "Bonjour Hery ! À quelle heure tu te lèves le matin ?",
+                  "mg": "Manao ahoana Hery ! Amin me firy ianao no mifoha ny maraina ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Hery",
+                  "fr": "Je me lève à 6 heures. Je me lave dans la salle de bain, puis je prends mon café.",
+                  "mg": "Mifoha amin me 6 ora aho. Misasa ao an-tsalle de bain aho, avy eo misotro kafe."
+                },
+                {
+                  "speaker": "Voisine",
+                  "fr": "Et ensuite tu vas au travail ?",
+                  "mg": "Ary avy eo mandeha miasa ianao ?"
+                },
+                {
+                  "speaker": "Hery",
+                  "fr": "Oui, je quitte la maison à 7 heures précises.",
+                  "mg": "Eny, miala ao an-trano amin me 7 ora vao tsimatratra aho."
                 }
               ],
               "key_vocabulary": [
-                "La maison / La chambre"
+                "Je me lève",
+                "La cuisine",
+                "Le matin",
+                "La salle de bain"
               ]
             },
             "activities": {
@@ -2062,20 +2176,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny trano sy ny fiainana andro ampy (La maison et les activités quotidiennes)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Nommer les pièces de la maison (chambre, cuisine, salon, salle de bain)",
+              "Raconter sa routine quotidienne avec des verbes pronominaux (se lever, se laver)",
+              "Exprimer les moments de la journée (le matin, le midi, le soir)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny trano sy ny fiainana andro ampy (La maison et les activités quotidiennes)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hanonona ny efitrano ao an-trano (chambre, cuisine, salon...)",
+              "Hitantara ny fahazarana andavanandro (se lever, se laver, travailler)",
+              "Hampiasa ny fotoana amin me andro (maraina, atoandro, hariva)"
             ]
           }
         },
         {
           "id": "l6_a1",
-          "title": "Ny sakafo sy ny fividianana (Les aliments, les boissons et les courses)",
+          "title": "Ny sakafo sy ny fividianana (Les aliments, commander et acheter)",
           "xp": 65,
           "content": {
             "introduction": "Hianatra ny anaran'ny sakafo sy zava-pisotro fahana ary ny fampiasana ny 'articles partitifs' (du, de la, des) rehefa mividy sakafo.",
@@ -2134,31 +2248,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no 'article partitif' ampiasaina amin'ny teny hoe 'eau' (voyelle)?",
+                "question": "Inona no article partitif ampiasaina amin me 'riz' (masculin) ?",
                 "options": [
-                  "Du",
-                  "De la",
-                  "De l'",
-                  "Des"
+                  "Du riz",
+                  "De la riz",
+                  "Des riz",
+                  "Une riz"
                 ],
-                "answer": "De l'"
+                "answer": "Du riz"
               },
               {
                 "type": "translate",
-                "question": "Adika amin'ny teny frantsay: 'Mba mangataka mofo azafady'",
+                "question": "Adika amin'ny teny malagasy: 'J'ai faim'",
                 "options": [
-                  "Je voudrais du pain s'il vous plaît",
-                  "Je veux du riz",
-                  "C'est de l'eau",
-                  "Merci pour le pain"
+                  "Manoana aho",
+                  "Mangetaheta aho",
+                  "Malahelo aho",
+                  "Sasa aho"
                 ],
-                "answer": "Je voudrais du pain s'il vous plaît"
-              },
-              {
-                "type": "shadowing",
-                "question": "Laosahy mafy ity fehezanteny ity: 'Je voudrais du pain et de l'eau'",
-                "phrase": "Je voudrais du pain et de l'eau",
-                "translation": "Mba mangataka mofo sy rano azafady"
+                "answer": "Manoana aho"
               }
             ],
             "pronunciation": [
@@ -2181,32 +2289,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny sakafo sy ny fividianana (Les aliments, les boissons et les courses)",
-              "situation": "Mise en situation réelle pour la leçon: Ny sakafo sy ny fividianana (Les aliments, les boissons et les courses).",
+              "title": "Commander à la gargote",
+              "situation": "Bakoly commande un plat au restaurant du quartier.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Serveur",
+                  "role": "Gargon de café"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Bakoly",
+                  "role": "Cliente"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Du pain / De l'eau, comment allez-vous ?",
-                  "mg": "Mofo / Rano, manao ahoana ny fahasalamana ?"
+                  "speaker": "Serveur",
+                  "fr": "Bonjour Mademoiselle ! Vous avez choisi ?",
+                  "mg": "Manao ahoana Razay ! Efa nifidy ve ianao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Bakoly",
+                  "fr": "Oui, je voudrais du riz avec du poulet s'il vous plaît.",
+                  "mg": "Eny, mba te-hahazo vary sy akoho aho azafady."
+                },
+                {
+                  "speaker": "Serveur",
+                  "fr": "Et comme boisson ?",
+                  "mg": "Ary inona no zava-pisotro ?"
+                },
+                {
+                  "speaker": "Bakoly",
+                  "fr": "De l'eau minérale bien fraîche, merci !",
+                  "mg": "Rano mineraly mangatsiaka tsara, misaotra !"
                 }
               ],
               "key_vocabulary": [
-                "Du pain / De l'eau"
+                "Je voudrais",
+                "Du riz",
+                "Du poulet",
+                "De l'eau"
               ]
             },
             "activities": {
@@ -2290,14 +2411,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny sakafo sy ny fividianana (Les aliments, les boissons et les courses)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Commander à manger et à boire dans un café ou un restaurant populaire",
+              "Utiliser les articles partitifs (du, de la, de l', des)",
+              "Exprimer la faim et la soif (J'ai faim, j'ai soif)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny sakafo sy ny fividianana (Les aliments, les boissons et les courses)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manohatra sy manafatra sakafo ary zava-pisotro ao amin me restora",
+              "Hampiasa tsara ny 'articles partitifs' (du, de la, des)",
+              "Milaza ny hanoanana sy hetaheta (J'ai faim, j'ai soif)"
             ]
           }
         },
@@ -2361,14 +2482,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Aiza no apetraka ny loko amin'ny teny frantsay?",
+                "question": "Ahoana no hanoratana 'une chemise' (féminin) amin me loko 'fotsy' ?",
                 "options": [
-                  "Aorian'ny anarana (nom)",
-                  "Anoloan'ny anarana",
-                  "Amin'ny faran'ny fehezanteny hatrany",
-                  "Tsy misy toerana raikitra"
+                  "Une chemise blanche",
+                  "Une chemise blanc",
+                  "Une chemise blancs",
+                  "Une chemise blancher"
                 ],
-                "answer": "Aorian'ny anarana (nom)"
+                "answer": "Une chemise blanche"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny frantsay: 'Manao pataloa manga izy'",
+                "options": [
+                  "Il porte un pantalon bleu.",
+                  "Il porte une pantalon bleu.",
+                  "Il porte des pantalon bleu.",
+                  "Il porte le pantalon bleue."
+                ],
+                "answer": "Il porte un pantalon bleu."
               }
             ],
             "pronunciation": [
@@ -2391,32 +2523,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny akanjo sy ny loko (Les vêtements, les couleurs et la description)",
-              "situation": "Mise en situation réelle pour la leçon: Ny akanjo sy ny loko (Les vêtements, les couleurs et la description).",
+              "title": "Choisir une tenue de fête",
+              "situation": "Fara et Vola préparent leurs affaires pour une fête.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Fara",
+                  "role": "Amie"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Vola",
+                  "role": "Amie"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Un pantalon / Une chemise, comment allez-vous ?",
-                  "mg": "Pataloha / Satiro (Chemise), manao ahoana ny fahasalamana ?"
+                  "speaker": "Fara",
+                  "fr": "Qu'est-ce que tu portes pour la fête de ce soir ?",
+                  "mg": "Inona no akanjo anaovanao amin me fety anio hariva ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Vola",
+                  "fr": "Je porte une belle robe rouge et des chaussures noires.",
+                  "mg": "Manao robe mena tsara tarehy sy kiraro mainty aho."
+                },
+                {
+                  "speaker": "Fara",
+                  "fr": "Et toi, tu mets un pantalon ?",
+                  "mg": "Ary ianao, manao pataloa ?"
+                },
+                {
+                  "speaker": "Fara",
+                  "fr": "Oui, un pantalon bleu avec une chemise blanche.",
+                  "mg": "Eny, pataloa manga sy lobaka fotsy."
                 }
               ],
               "key_vocabulary": [
-                "Un pantalon / Une chemise"
+                "Robe",
+                "Pantalon",
+                "Rouge",
+                "Elle porte"
               ]
             },
             "activities": {
@@ -2498,20 +2643,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny akanjo sy ny loko (Les vêtements, les couleurs et la description)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Nommer les vêtements principaux (pantalon, chemise, robe, chaussures)",
+              "Accorder correctement les adjectifs de couleur (bleu/bleue, blanc/blanche)",
+              "Décrire la tenue vestimentaire d'une personne (Il/Elle porte...)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny akanjo sy ny loko (Les vêtements, les couleurs et la description)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Hanonona ny akanjo lehibe (pantalon, chemise, robe...)",
+              "Hampifanaraka ny loko amin me anarana (bleu/bleue, blanc/blanche)",
+              "Hamaritra ny akanjo anaovan'ny olona iray (Il/Elle porte...)"
             ]
           }
         },
         {
           "id": "l8_a1",
-          "title": "Ny toerana eo an-tanàna (Les lieux de la ville et les prépositions)",
+          "title": "Ny toerana eo an-tanàna (Les lieux de la ville et s'orienter)",
           "xp": 70,
           "content": {
             "introduction": "Hianatra ny anaran'ny toerana lehibe amin'ny tanàna sy ny fampiasana ny prépositions de lieu (à, chez, devant, à côté de).",
@@ -2569,14 +2714,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana hoe 'Handeha any amin'ny dokotera aho'?",
+                "question": "Inona no dikan'ny 'En face de' ?",
                 "options": [
-                  "Je vais chez le médecin",
-                  "Je vais à le médecin",
-                  "Je suis le médecin",
-                  "Je prends le médecin"
+                  "An-tranga / Mifanohitra eo an-tranga",
+                  "Eo anilany",
+                  "Eo aoriana",
+                  "Lavitra be"
                 ],
-                "answer": "Je vais chez le médecin"
+                "answer": "An-tranga / Mifanohitra eo an-tranga"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny frantsay: 'Aiza no misy ny poste azafady ?'",
+                "options": [
+                  "Pardon, où se trouve la poste s'il vous plaît ?",
+                  "Pardon, comment est la poste ?",
+                  "Pardon, qui est la poste ?",
+                  "Pardon, quand ouvre la poste ?"
+                ],
+                "answer": "Pardon, où se trouve la poste s'il vous plaît ?"
               }
             ],
             "pronunciation": [
@@ -2599,32 +2755,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny toerana eo an-tanàna (Les lieux de la ville et les prépositions)",
-              "situation": "Mise en situation réelle pour la leçon: Ny toerana eo an-tanàna (Les lieux de la ville et les prépositions).",
+              "title": "Demander son chemin en ville",
+              "situation": "Un touriste cherche la banque centrale près de la poste.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Passant",
+                  "role": "Habitant d'Anosy"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Touriste",
+                  "role": "Visiteur"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "La banque / La poste, comment allez-vous ?",
-                  "mg": "Ny banky / Ny posta, manao ahoana ny fahasalamana ?"
+                  "speaker": "Touriste",
+                  "fr": "Pardon Monsieur, où se trouve la banque s'il vous plaît ?",
+                  "mg": "Azafady Andriamatoa, aiza no misy ny banque azafady ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Passant",
+                  "fr": "La banque est tout près ! Elle est en face de la poste, à côté du marché.",
+                  "mg": "Akaiky kely ny banque ! Eo an-ky ny poste, eo anilan'ny tsena."
+                },
+                {
+                  "speaker": "Touriste",
+                  "fr": "C'est à pied ou en bus ?",
+                  "mg": "Amin me tongotra ve izany ala amin me bus ?"
+                },
+                {
+                  "speaker": "Passant",
+                  "fr": "C'est à 2 minutes à pied. Allez tout droit !",
+                  "mg": "2 minitra amin me tongotra. Mandehana mahitsy tsara !"
                 }
               ],
               "key_vocabulary": [
-                "La banque / La poste"
+                "Où se trouve",
+                "En face de",
+                "À côté de",
+                "Tout droit"
               ]
             },
             "activities": {
@@ -2706,20 +2875,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny toerana eo an-tanàna (Les lieux de la ville et les prépositions)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Indiquer et demander la localisation de bâtiments publics (banque, poste, gare)",
+              "Utiliser les prépositions de lieu (devant, derrière, à côté de, en face de)",
+              "Demander son chemin dans la rue ('Pardon, où se trouve...?')"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny toerana eo an-tanàna (Les lieux de la ville et les prépositions)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manontany sy manondro ny toerana eo an-tanàna (banque, poste, gare)",
+              "Hampiasa tsara ny prépositions de lieu (devant, derrière, à côté de)",
+              "Manontany ny lalana amin me lalana ('Pardon, où se trouve...?')"
             ]
           }
         },
         {
           "id": "l9_a1",
-          "title": "Matoanteny fototra sy ny négation (Les verbes en -ER et la négation Ne...pas)",
+          "title": "Matoanteny fototra sy ny négation (Verbes en -ER et Négation Ne...pas)",
           "xp": 70,
           "content": {
             "introduction": "Hianatra ny fitanisa matoanteny miafara amin'ny -ER amin'ny Présent ary ny fanaovana fehezanteny mandà 'Ne...pas'.",
@@ -2777,14 +2946,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana fehezanteny mandà hoe 'Tsy miasa aho'?",
+                "question": "Ahoana no hanoratana 'Tsy miteny frantsay izy' amin me présent ?",
                 "options": [
-                  "Je ne travaille pas",
-                  "Je travaille pas ne",
-                  "Je pas travaille",
-                  "Pas travailler je"
+                  "Il ne parle pas français.",
+                  "Il pas parle français.",
+                  "Il ne parler pas français.",
+                  "Il n'est pas français."
                 ],
-                "answer": "Je ne travaille pas"
+                "answer": "Il ne parle pas français."
+              },
+              {
+                "type": "translate",
+                "question": "Conjugaison du verbe HABITER avec 'NOUS':",
+                "options": [
+                  "Nous habitons",
+                  "Nous habitez",
+                  "Nous habitent",
+                  "Nous habitons pas"
+                ],
+                "answer": "Nous habitons"
               }
             ],
             "pronunciation": [
@@ -2807,32 +2987,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Matoanteny fototra sy ny négation (Les verbes en -ER et la négation Ne...pas)",
-              "situation": "Mise en situation réelle pour la leçon: Matoanteny fototra sy ny négation (Les verbes en -ER et la négation Ne...pas).",
+              "title": "Parler des langues et du travail",
+              "situation": "Aina et Marc font connaissance dans un cours de langues.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Aina",
+                  "role": "Étudiante"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Marc",
+                  "role": "Étudiant"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Parler / Travailler, comment allez-vous ?",
-                  "mg": "Miteny / Miasa, manao ahoana ny fahasalamana ?"
+                  "speaker": "Marc",
+                  "fr": "Est-ce que tu habites à Antananarivo, Aina ?",
+                  "mg": "Mipetraka ao Antananarivo ve ianao, Aina ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Aina",
+                  "fr": "Non, je n'habite pas à Tana, j'habite à Antsirabe.",
+                  "mg": "Tsy mipetraka any Tana aho, fa any Antsirabe."
+                },
+                {
+                  "speaker": "Marc",
+                  "fr": "Tu parles anglais ?",
+                  "mg": "Miteny anglisy ve ianao ?"
+                },
+                {
+                  "speaker": "Aina",
+                  "fr": "Je parle français et malgache, mais je ne parle pas anglais.",
+                  "mg": "Miteny frantsay sy malagasy aho, fa tsy miteny anglisy."
                 }
               ],
               "key_vocabulary": [
-                "Parler / Travailler"
+                "J'habite",
+                "Je ne parle pas",
+                "Travailler",
+                "Aujourd'hui"
               ]
             },
             "activities": {
@@ -2914,14 +3107,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Matoanteny fototra sy ny négation (Les verbes en -ER et la négation Ne...pas)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Conjuguer les verbes réguliers du 1er groupe (-ER) au présent de l'indicatif",
+              "Formuler des phrases négatives avec 'Ne... pas' (ex: Je ne parle pas)",
+              "Exprimer des actions simples quotidiennes (parler, manger, habiter, travailler)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Matoanteny fototra sy ny négation (Les verbes en -ER et la négation Ne...pas)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mampifanaraka ny verbes en -ER amin me présent de l'indicatif",
+              "Manoratra fehezanteny mandà 'Ne... pas' (ex: Je ne parle pas)",
+              "Milaza zavatra atao andavanandro (parler, manger, habiter)"
             ]
           }
         }
@@ -2934,7 +3127,7 @@
       "lessons": [
         {
           "id": "l3",
-          "title": "Miantso taxi sy Ny fitaterana (Prendre un taxi et Transports)",
+          "title": "Miantso taxi sy Ny fitaterana (Prendre un taxi et transports)",
           "xp": 80,
           "content": {
             "introduction": "Hianatra ny fomba fandraisana taxi, ny fifanarahana amin'ny mpamily, ary ny fanehoana lalana sy fitaterana eto an-tanàna.",
@@ -3001,25 +3194,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny 'Tournez à droite'?",
+                "question": "Ahoana no manontany ny vidin'ny taxi-ville ?",
                 "options": [
-                  "Mivilia miankavia",
-                  "Mandehana mahitsy",
-                  "Mivilia miankavanana",
-                  "Mijanòna eto"
+                  "C'est combien la course s'il vous plaît ?",
+                  "Combien pèse le taxi ?",
+                  "Où achète-t-on la voiture ?",
+                  "Donne moi le bus !"
                 ],
-                "answer": "Mivilia miankavanana"
+                "answer": "C'est combien la course s'il vous plaît ?"
               },
               {
                 "type": "translate",
-                "question": "Ahoana no ilazana hoe 'Mandehana mahitsy'?",
+                "question": "Adika amin'ny teny frantsay: 'Mandehana mahitsy tsara'",
                 "options": [
-                  "Allez tout droit",
-                  "Tournez à gauche",
-                  "Arrêtez-vous ici",
-                  "Montez dans le taxi"
+                  "Allez tout droit.",
+                  "Tournez à gauche.",
+                  "Tournez à droite.",
+                  "Arrêtez-vous ici."
                 ],
-                "answer": "Allez tout droit"
+                "answer": "Allez tout droit."
               }
             ],
             "pronunciation": [
@@ -3042,32 +3235,50 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Miantso taxi sy Ny fitaterana (Prendre un taxi et Transports)",
-              "situation": "Mise en situation réelle pour la leçon: Miantso taxi sy Ny fitaterana (Prendre un taxi et Transports).",
+              "title": "Prendre un taxi-ville pour Analakely",
+              "situation": "Rivo prend un taxi-ville à la gare routière d'Anosibe.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Chauffeur",
+                  "role": "Conducteur de taxi"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Rivo",
+                  "role": "Passager"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Déposez-moi à Analakely, comment allez-vous ?",
-                  "mg": "Eto Analakely aho no midina azafady, manao ahoana ny fahasalamana ?"
+                  "speaker": "Chauffeur",
+                  "fr": "Bonjour Chef ! Vous allez où ?",
+                  "mg": "Manao ahoana Chef ! Ho aiza ianao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Rivo",
+                  "fr": "Bonjour, je vais à Analakely. C'est combien la course ?",
+                  "mg": "Manao ahoana, ho any Analakely aho. Ohatrinona ny lalana ?"
+                },
+                {
+                  "speaker": "Chauffeur",
+                  "fr": "C'est 15 000 Ariary.",
+                  "mg": "15 000 Ariary ny vidiny."
+                },
+                {
+                  "speaker": "Rivo",
+                  "fr": "15 000 Ariary ? C'est un peu cher ! Vous pouvez faire à 12 000 Ariary ?",
+                  "mg": "15 000 Ariary ? Lafo kely izany ! Azo atao 12 000 Ariary ve ?"
+                },
+                {
+                  "speaker": "Chauffeur",
+                  "fr": "D'accord pour 12 000 Ariary. Montez !",
+                  "mg": "Eny ary 12 000 Ariary. Mipetraha !"
                 }
               ],
               "key_vocabulary": [
-                "Déposez-moi à Analakely"
+                "C'est combien la course",
+                "Analakely",
+                "C'est cher",
+                "Montez"
               ]
             },
             "activities": {
@@ -3150,20 +3361,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Miantso taxi sy Ny fitaterana (Prendre un taxi et Transports)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Commander une course de taxi ou demander un itinéraire de taxi-be",
+              "Négocier le prix de la course poliment",
+              "Utiliser le vocabulaire de l'orientation (virer à gauche, tourner à droite, continuer tout droit)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Miantso taxi sy Ny fitaterana (Prendre un taxi et Transports)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manakarama taxi na manontany zotran'ny taxi-be",
+              "Miresaka ny vidin me lalana am-panajana",
+              "Hampiasa ny voambolana fitarihana lalana (kavia, havitana, mahitsy)"
             ]
           }
         },
         {
           "id": "l4",
-          "title": "Ao amin'ny restora sy ny sakafo (Au restaurant et Commander)",
+          "title": "Ao amin'ny restora sy ny sakafo (Au restaurant et commander à manger)",
           "xp": 85,
           "content": {
             "introduction": "Hianatra ny fomba famandrihana latabatra, ny fahazoana ny karajia (menu), ary ny fandefasana kaomandy ao amin'ny restora.",
@@ -3230,25 +3441,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no mangataka faktiora amin me fomba amam-panao?",
+                "question": "Ahoana no mangataka fandoavam-bola (facture) ao amin me restora ?",
                 "options": [
-                  "Donnez-moi l'argent",
-                  "L'addition, s'il vous plaît",
-                  "Où est la sortie ?",
-                  "Je veux partir"
+                  "L'addition s'il vous plaît !",
+                  "Donne moi l'argent !",
+                  "Combien coûte le serveur ?",
+                  "C'est gratuit !"
                 ],
-                "answer": "L'addition, s'il vous plaît"
+                "answer": "L'addition s'il vous plaît !"
               },
               {
                 "type": "translate",
-                "question": "Ahoana no ilazana hoe 'Te hankaomandy aho'?",
+                "question": "Adika amin'ny teny malagasy: 'Le plat du jour'",
                 "options": [
-                  "Je voudrais commander",
-                  "Je ne mange pas",
-                  "C'est trop cher",
-                  "Merci beaucoup"
+                  "Ny sakafo voatokana ho an'ny anio",
+                  "Ny latabatra ny anio",
+                  "Ny vilia madio",
+                  "Ny rano mangatsiaka"
                 ],
-                "answer": "Je voudrais commander"
+                "answer": "Ny sakafo voatokana ho an'ny anio"
               }
             ],
             "pronunciation": [
@@ -3271,32 +3482,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ao amin'ny restora sy ny sakafo (Au restaurant et Commander)",
-              "situation": "Mise en situation réelle pour la leçon: Ao amin'ny restora sy ny sakafo (Au restaurant et Commander).",
+              "title": "Commander à manger au restaurant",
+              "situation": "Haja déjeune avec sa collègue dans un restaurant de la ville.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Serveur",
+                  "role": "Serveur du restaurant"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Haja",
+                  "role": "Client"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Le menu, s'il vous plaît, comment allez-vous ?",
-                  "mg": "Ny lisitry ny sakafo azafady, manao ahoana ny fahasalamana ?"
+                  "speaker": "Serveur",
+                  "fr": "Bonjour ! Avez-vous une réservation ?",
+                  "mg": "Manao ahoana ! Misy famandrihana ve aminaroe ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Haja",
+                  "fr": "Bonjour, non. Avez-vous une table pour deux personnes ?",
+                  "mg": "Manao ahoana, tsy misy. Misy latabatra ho an'olona roa ve ?"
+                },
+                {
+                  "speaker": "Serveur",
+                  "fr": "Oui, voici votre table. Qu'est-ce que vous désirez ?",
+                  "mg": "Eny, inty ny latabatra. Inona no irinao ?"
+                },
+                {
+                  "speaker": "Haja",
+                  "fr": "Je voudrais le plat du jour et une bouteille d'eau s'il vous plaît.",
+                  "mg": "Te-hahazo ny plat du jour sy tavoahangy rano iray aho azafady."
                 }
               ],
               "key_vocabulary": [
-                "Le menu, s'il vous plaît"
+                "Une table pour deux",
+                "Le plat du jour",
+                "L'addition",
+                "S'il vous plaît"
               ]
             },
             "activities": {
@@ -3379,20 +3603,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ao amin'ny restora sy ny sakafo (Au restaurant et Commander)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Réserver une table pour plusieurs personnes",
+              "Demander la carte et le plat du jour",
+              "Passer commande et demander l'addition poliment"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ao amin'ny restora sy ny sakafo (Au restaurant et Commander)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mamandrika latabatra ao amin me restora",
+              "Mangataka ny carte sy ny plat du jour",
+              "Manafatra sakafo sy mangataka ny fandoavam-bola (l'addition)"
             ]
           }
         },
         {
           "id": "l5",
-          "title": "Manao fotoana sy ny ora (Prendre rendez-vous et L'heure)",
+          "title": "Manao fotoana sy ny ora (Prendre rendez-vous et exprimer l'heure)",
           "xp": 90,
           "content": {
             "introduction": "Hianatra ny fomba filazana ny ora, ny fikarakarana fotoana amin'ny namana na dokotera, ary ny fialan-tsiny rehefa tara.",
@@ -3459,25 +3683,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'Je suis en retard'?",
+                "question": "Ahoana no hilazana '14h30' amin me teny frantsay ?",
                 "options": [
-                  "Tonga aloha aho",
-                  "Tara aho",
-                  "Kely saina aho",
-                  "Tsy afaka manao aho"
+                  "Quatorze heures trente / Quatorze heures et demie",
+                  "Deux heures trois",
+                  "Treize heures trente",
+                  "Quatorze heures quart"
                 ],
-                "answer": "Tara aho"
+                "answer": "Quatorze heures trente / Quatorze heures et demie"
               },
               {
                 "type": "translate",
-                "question": "Ahoana no ilazana hoe 'Amin'ny firy izao?'",
+                "question": "Adika amin'ny teny malagasy: 'Je voudrais prendre rendez-vous'",
                 "options": [
-                  "Quelle heure est-il ?",
-                  "Où allez-vous ?",
-                  "Comment allez-vous ?",
-                  "Combien ça fait ?"
+                  "Mba te-hahazo fotoana aho",
+                  "Mba te-hividy fiara aho",
+                  "Mba te-hirina rano aho",
+                  "Mba te-handeha hatory aho"
                 ],
-                "answer": "Quelle heure est-il ?"
+                "answer": "Mba te-hahazo fotoana aho"
               }
             ],
             "pronunciation": [
@@ -3500,32 +3724,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Manao fotoana sy ny ora (Prendre rendez-vous et L'heure)",
-              "situation": "Mise en situation réelle pour la leçon: Manao fotoana sy ny ora (Prendre rendez-vous et L'heure).",
+              "title": "Prendre rendez-vous chez le médecin",
+              "situation": "Noro appelle le cabinet médical pour fixer une consultation.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Secrétaire",
+                  "role": "Accueil du cabinet"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Noro",
+                  "role": "Patiente"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Quelle heure est-il ?, comment allez-vous ?",
-                  "mg": "Amingny firy izao ?, manao ahoana ny fahasalamana ?"
+                  "speaker": "Secrétaire",
+                  "fr": "Cabinet médical du Dr Ravelo, bonjour !",
+                  "mg": "Cabinet médical du Dr Ravelo, manao ahoana !"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Noro",
+                  "fr": "Bonjour, je voudrais prendre rendez-vous avec le docteur s'il vous plaît.",
+                  "mg": "Manao ahoana, mba te-hahazo fotoana amin me dokotera aho azafady."
+                },
+                {
+                  "speaker": "Secrétaire",
+                  "fr": "Est-ce que mardi à 14 heures 30 vous convient ?",
+                  "mg": "Mety aminao ve ny talata amin me 2 ora sy sasany ?"
+                },
+                {
+                  "speaker": "Noro",
+                  "fr": "Mardi à 14h30, c'est parfait pour moi. Merci !",
+                  "mg": "Talata amin me 2 ora sy sasany, tsara indrindra amiko izany. Misaotra !"
                 }
               ],
               "key_vocabulary": [
-                "Quelle heure est-il ?"
+                "Prendre rendez-vous",
+                "14 heures 30",
+                "Ça me convient",
+                "Consultation"
               ]
             },
             "activities": {
@@ -3608,14 +3845,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Manao fotoana sy ny ora (Prendre rendez-vous et L'heure)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Prendre, fixer ou décaler un rendez-vous professionnel ou médical",
+              "Exprimer l'heure exacte et les moments de la journée",
+              "Demander les disponibilités de quelqu'un"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Manao fotoana sy ny ora (Prendre rendez-vous et L'heure)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manao, mametraka na manova fotoana am-biraoy na amin me dokotera",
+              "Milaza ny ora marina sy ny fotoana",
+              "Manontany ny malalaka misy amin me olona iray"
             ]
           }
         },
@@ -3688,25 +3925,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'Hier, j'ai mangé'?",
+                "question": "Mpanampy (auxiliaire) inona no ampiasaina amin me verbe 'Aller' amin me Passé Composé ?",
                 "options": [
-                  "Omaly aho niharrana",
-                  "Anio aho hiharrana",
-                  "Abohitra aho miharrana",
-                  "Ampitso aho hiharrana"
+                  "Auxiliaire ÊTRE (Je suis allé)",
+                  "Auxiliaire AVOIR (J'ai allé)",
+                  "Verbe FAIRE (Je fais allé)",
+                  "Verbe VENIR (Je viens allé)"
                 ],
-                "answer": "Omaly aho niharrana"
+                "answer": "Auxiliaire ÊTRE (Je suis allé)"
               },
               {
                 "type": "translate",
-                "question": "Ahoana no ilazana hoe 'Nandeha tany Tana aho'?",
+                "question": "Adika amin'ny teny frantsay: 'Nihinana mofo izahay omaly'",
                 "options": [
-                  "Je vais à Tana",
-                  "Je suis allé à Tana",
-                  "Je veux aller à Tana",
-                  "Je viens de Tana"
+                  "Nous avons mangé du pain hier.",
+                  "Nous sommes mangé du pain hier.",
+                  "Nous mangeons du pain hier.",
+                  "Nous mangerons du pain hier."
                 ],
-                "answer": "Je suis allé à Tana"
+                "answer": "Nous avons mangé du pain hier."
               }
             ],
             "pronunciation": [
@@ -3729,32 +3966,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Mitantara ny zavatra efa lasa (Raconter au passé composé)",
-              "situation": "Mise en situation réelle pour la leçon: Mitantara ny zavatra efa lasa (Raconter au passé composé).",
+              "title": "Raconter son week-end entre amis",
+              "situation": "Fara raconte son week-end à Majunga à son collègue Jean.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Jean",
+                  "role": "Collègue de bureau"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Fara",
+                  "role": "Collègue"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Hier, j'ai mangé..., comment allez-vous ?",
-                  "mg": "Omaly aho niharrana..., manao ahoana ny fahasalamana ?"
+                  "speaker": "Jean",
+                  "fr": "Salut Fara ! Qu'est-ce que tu as fait ce week-end ?",
+                  "mg": "Manao ahoana Fara ! Inona no nataonao tamin me faran'ny herinandro ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Fara",
+                  "fr": "Hier, je suis allée à la plage. Nous avons nagé et nous avons mangé du poisson grillé !",
+                  "mg": "Omaly, nandeha tany amin me tora-pasika aho. Nilomano sy nihinana trondro natsatsika izahay !"
+                },
+                {
+                  "speaker": "Jean",
+                  "fr": "C'est super ! Tu es rentrée quand ?",
+                  "mg": "Tsara izany ! Rahoviana ianao no nody ?"
+                },
+                {
+                  "speaker": "Fara",
+                  "fr": "Je suis rentrée dimanche soir vers 20 heures.",
+                  "mg": "Nody aho ny alahady hariva tamin me 8 ora vao tsimatratra."
                 }
               ],
               "key_vocabulary": [
-                "Hier, j'ai mangé..."
+                "Je suis allée",
+                "Nous avons mangé",
+                "Hier",
+                "Dimanche soir"
               ]
             },
             "activities": {
@@ -3837,20 +4087,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Mitantara ny zavatra efa lasa (Raconter au passé composé)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Former le passé composé avec les auxiliaires Avoir et Être",
+              "Raconter les événements marquants de son week-end ou de ses vacances",
+              "Utiliser des marqueurs temporels du passé (hier, le mois dernier, il y a deux jours)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Mitantara ny zavatra efa lasa (Raconter au passé composé)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manoratra ny passé composé ampiasana ny Avoir sy Être",
+              "Hitantara ny faran'ny herinandro na ny fialantsasatra",
+              "Hampiasa ny marqueurs temporels (hier, le mois dernier...)"
             ]
           }
         },
         {
           "id": "l7_a2",
-          "title": "Ny fahasalamana sy ny vatana (La santé et le corps humain)",
+          "title": "Ny fahasalamana sy ny vatana (La santé, les symptômes et le corps humain)",
           "xp": 90,
           "content": {
             "introduction": "Hianatra ny anaran'ny piesy amin'ny vatana, ny fomba filazana ny marary amin'ny dokotera na amin'ny pharmacie.",
@@ -3908,14 +4158,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'J'ai mal à la tête'?",
+                "question": "Ahoana no hilazana hoe 'Marary ny lohako' ?",
                 "options": [
-                  "Marary loha aho",
-                  "Marary kibo aho",
-                  "Marary nify aho",
-                  "Marary tongotra aho"
+                  "J'ai mal à la tête.",
+                  "J'ai mal au ventre.",
+                  "J'ai mal aux pieds.",
+                  "J'ai faim à la tête."
                 ],
-                "answer": "Marary loha aho"
+                "answer": "J'ai mal à la tête."
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'De la fièvre'",
+                "options": [
+                  "Hafanana / Sery",
+                  "Mangatsiaka",
+                  "Fanaintainana",
+                  "Vizaka"
+                ],
+                "answer": "Hafanana / Sery"
               }
             ],
             "pronunciation": [
@@ -3938,32 +4199,40 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny fahasalamana sy ny vatana (La santé et le corps humain)",
-              "situation": "Mise en situation réelle pour la leçon: Ny fahasalamana sy ny vatana (La santé et le corps humain).",
+              "title": "Consultation chez le médecin",
+              "situation": "Koto consulte un médecin pour de la fièvre et un mal de gorge.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Médecin",
+                  "role": "Docteur"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Koto",
+                  "role": "Patient"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "J'ai mal à la tête, comment allez-vous ?",
-                  "mg": "Marary loha aho, manao ahoana ny fahasalamana ?"
+                  "speaker": "Médecin",
+                  "fr": "Bonjour Koto. Qu'est-ce qui ne va pas ?",
+                  "mg": "Manao ahoana Koto. Inona no marary aminao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Koto",
+                  "fr": "Bonjour docteur. J'ai très mal à la gorge et j'ai de la fièvre depuis hier.",
+                  "mg": "Manao ahoana dokotera. Marary be ny tendako ary misy hafanana aho hatramin me omaly."
+                },
+                {
+                  "speaker": "Médecin",
+                  "fr": "Ouvrez la bouche... Vous avez une angine. Je vais vous prescrire du paracétamol.",
+                  "mg": "Sokafy ny vava... Angine izany. Hanoratra paracétamol ho anao aho."
                 }
               ],
               "key_vocabulary": [
-                "J'ai mal à la tête"
+                "J'ai mal à la gorge",
+                "De la fièvre",
+                "Prescrire",
+                "Ordonnance"
               ]
             },
             "activities": {
@@ -4045,20 +4314,20 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny fahasalamana sy ny vatana (La santé et le corps humain)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Exprimer une douleur ou un problème de santé ('J'ai mal à...')",
+              "Décrire ses symptômes au médecin ou au pharmacien",
+              "Comprendre une ordonnance médicale simple"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny fahasalamana sy ny vatana (La santé et le corps humain)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Milaza marary na olana ara-fahasalamana ('J'ai mal à...')",
+              "Hamaritra ny alana amin me dokotera na farmasia",
+              "Hahazo ny taratasy fanafody fohy"
             ]
           }
         },
         {
           "id": "l8_a2",
-          "title": "Maneho hevitra sy fientanentanana (Exprimer son opinion et ses goûts)",
+          "title": "Maneho hevitra sy fientanentanana (Exprimer son opinion, ses goûts et préférences)",
           "xp": 95,
           "content": {
             "introduction": "Hianatra ny fomba filazana ny zavatra tiana sy tsy tiana, ary ny fanehoana hevitra manokana amin'ny fomba amam-panao.",
@@ -4116,14 +4385,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no dikan'ny hoe 'À mon avis'?",
+                "question": "Inona no fampiasa amin me Maneho hevitra (exprimer son opinion) ?",
                 "options": [
-                  "Araka ny hevitro",
-                  "Tsy fantatro",
-                  "Ampitso maraina",
-                  "Azafady indrindra"
+                  "À mon avis / Je trouve que",
+                  "S'il vous plaît",
+                  "C'est de la part de",
+                  "Comment allez-vous"
                 ],
-                "answer": "Araka ny hevitro"
+                "answer": "À mon avis / Je trouve que"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'Je préfère le café'",
+                "options": [
+                  "Maimay kely ny kafe amiko / Tiako kokoa ny kafe",
+                  "Misotro kafe aho",
+                  "Manao kafe aho",
+                  "Hividy kafe aho"
+                ],
+                "answer": "Maimay kely ny kafe amiko / Tiako kokoa ny kafe"
               }
             ],
             "pronunciation": [
@@ -4146,32 +4426,40 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Maneho hevitra sy fientanentanana (Exprimer son opinion et ses goûts)",
-              "situation": "Mise en situation réelle pour la leçon: Maneho hevitra sy fientanentanana (Exprimer son opinion et ses goûts).",
+              "title": "Donner son avis sur un film",
+              "situation": "Soa et Lova donnent leur opinion en sortant du cinéma.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Soa",
+                  "role": "Amie"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Lova",
+                  "role": "Ami"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "J'adore / Je déteste, comment allez-vous ?",
-                  "mg": "Tena tiako be / Tsy tiako mihitsy, manao ahoana ny fahasalamana ?"
+                  "speaker": "Soa",
+                  "fr": "Qu'est-ce que tu penses du film, Lova ?",
+                  "mg": "Inona no hevitrao momba ity film ity, Lova ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Lova",
+                  "fr": "À mon avis, c'est un excellent film ! L'histoire est passionnante.",
+                  "mg": "Amiko amby, film tsara dia tsara izy ! Mahaliana ny tantara."
+                },
+                {
+                  "speaker": "Soa",
+                  "fr": "Moi, je trouve que c'est un peu trop long, mais j'adore les acteurs !",
+                  "mg": "Maha amiko kosa, somary lava kely izy, fa tiako be ireo mpilalao !"
                 }
               ],
               "key_vocabulary": [
-                "J'adore / Je déteste"
+                "À mon avis",
+                "Je trouve que",
+                "J'adore",
+                "C'est excellent"
               ]
             },
             "activities": {
@@ -4253,14 +4541,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Maneho hevitra sy fientanentanana (Exprimer son opinion et ses goûts)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Donner son avis sur un film, un livre ou une activité ('À mon avis...', 'Je trouve que...')",
+              "Exprimer ses préférences et ses goûts ('J'adore', 'Je déteste', 'Je préfère')",
+              "Justifier simplement son opinion"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Maneho hevitra sy fientanentanana (Exprimer son opinion et ses goûts)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Maneho ny hevitra momba ny horonantsary, boky na zavatra atao",
+              "Milaza ny tiana sy tsy tiana ('J'adore', 'Je déteste')",
+              "Manangana antony fohy hanohanana ny hevitra"
             ]
           }
         },
@@ -4324,14 +4612,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana amin'ny Imparfait hoe 'Rehefa mbola tanora aho'?",
+                "question": "Amin me inona no ampiasaina ny 'L'Imparfait' ?",
                 "options": [
-                  "Quand j'étais jeune",
-                  "Quand je suis jeune",
-                  "Quand je serai jeune",
-                  "Je vais être jeune"
+                  "Fitantarana fahazarana sy famaritana amin me zavatra lasa (passé)",
+                  "Zavatra atao amin me hoavy (futur)",
+                  "Manao baiko (impératif)",
+                  "Manontany vidin'entana"
                 ],
-                "answer": "Quand j'étais jeune"
+                "answer": "Fitantarana fahazarana sy famaritana amin me zavatra lasa (passé)"
+              },
+              {
+                "type": "translate",
+                "question": "Conjugaison du verbe ÊTRE à l'Imparfait avec 'JE':",
+                "options": [
+                  "J'étais",
+                  "Je suis",
+                  "J'ai été",
+                  "Je serai"
+                ],
+                "answer": "J'étais"
               }
             ],
             "pronunciation": [
@@ -4354,32 +4653,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ny fitantarana fahatsiarovana sy fahazarana tamin'ny alalan'ny L'Imparfait",
-              "situation": "Mise en situation réelle pour la leçon: Ny fitantarana fahatsiarovana sy fahazarana tamin'ny alalan'ny L'Imparfait.",
+              "title": "Souvenirs d'enfance à la campagne",
+              "situation": "Grand-père Rabe raconte sa jeunesse à son petit-fils Toky.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Grand-père",
+                  "role": "Aîné"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Toky",
+                  "role": "Petit-fils"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Quand j'étais jeune..., comment allez-vous ?",
-                  "mg": "Rehefa mbola tanora aho..., manao ahoana ny fahasalamana ?"
+                  "speaker": "Toky",
+                  "fr": "Grand-père, comment était la vie quand tu étais petit ?",
+                  "mg": "Dadabe, ahoana ny fiainana tamin'izay ianao mbola kely ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Grand-père",
+                  "fr": "Quand j'étais petit, nous habitions à la campagne. Chaque matin, j'allais à l'école à pied.",
+                  "mg": "Tamin'izay aho mbola kely, nipetraka any ambanivohitra izahay. Isaky ny maraina, mandeha an-tongotra any am-parihy aho."
+                },
+                {
+                  "speaker": "Toky",
+                  "fr": "C'était bien ?",
+                  "mg": "Tsara ve izany ?"
+                },
+                {
+                  "speaker": "Grand-père",
+                  "fr": "Oui, la vie était calme et nous jouions dehors toute la journée !",
+                  "mg": "Eny, nilamina ny fiainana ary nilalao teo ivelany tontolo andro izahay !"
                 }
               ],
               "key_vocabulary": [
-                "Quand j'étais jeune..."
+                "Quand j'étais petit",
+                "Nous habitions",
+                "J'allais",
+                "Nous jouions"
               ]
             },
             "activities": {
@@ -4461,14 +4773,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ny fitantarana fahatsiarovana sy fahazarana tamin'ny alalan'ny L'Imparfait",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Conjuguer les verbes à l'Imparfait pour exprimer des habitudes passées",
+              "Évoquer des souvenirs d'enfance ('Quand j'étais petit...')",
+              "Distinguer l'utilisation du Passé Composé (action ponctuelle) et de l'Imparfait (description/habitude)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ny fitantarana fahatsiarovana sy fahazarana tamin'ny alalan'ny L'Imparfait",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mampifanaraka ny verbes amin me L'Imparfait amin me fahazarana taloha",
+              "Hambara fahatsiarovana tamin me fahazazana",
+              "Haseho ny fahasamihafan'ny Passé Composé sy L'Imparfait"
             ]
           }
         },
@@ -4532,14 +4844,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana hoe 'Maka roa kilo amin'izany aho' mampiasa ny pronom 'En'?",
+                "question": "Inona no solontena (pronom) hanoloana ny habetsahany (ex: du riz -> j'___ veux) ?",
                 "options": [
-                  "J'en prends deux kilos",
-                  "Je prends les deux kilos",
-                  "Je deux kilos",
-                  "Je prends de kilos"
+                  "Pronom EN (J'en veux)",
+                  "Pronom LE",
+                  "Pronom Y",
+                  "Pronom MOI"
                 ],
-                "answer": "J'en prends deux kilos"
+                "answer": "Pronom EN (J'en veux)"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'Un kilo de pommes'",
+                "options": [
+                  "Kilao paoma iray",
+                  "Tavoahangy paoma iray",
+                  "Paoma iray fotsiny",
+                  "Fonosana paoma"
+                ],
+                "answer": "Kilao paoma iray"
               }
             ],
             "pronunciation": [
@@ -4562,32 +4885,45 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Fiantsenana amin'ny fivarotana sy ny lanja (Magasins, quantités et le pronom En)",
-              "situation": "Mise en situation réelle pour la leçon: Fiantsenana amin'ny fivarotana sy ny lanja (Magasins, quantités et le pronom En).",
+              "title": "Acheter des fruits à l'épicerie",
+              "situation": "Miora achète des pommes à l'épicerie du quartier.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Épicier",
+                  "role": "Vendeur"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Miora",
+                  "role": "Cliente"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Un kilo de... / Un litre de..., comment allez-vous ?",
-                  "mg": "Kilo iray... / Litra iray..., manao ahoana ny fahasalamana ?"
+                  "speaker": "Épicier",
+                  "fr": "Bonjour Mademoiselle ! Vous désirez des pommes ?",
+                  "mg": "Manao ahoana Razay ! Mba te-hahazo paoma ve ianao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Miora",
+                  "fr": "Oui, j'en prends deux kilos s'il vous plaît.",
+                  "mg": "Eny, mandray kilao roa amin'izany aho azafady."
+                },
+                {
+                  "speaker": "Épicier",
+                  "fr": "Et du sucre ?",
+                  "mg": "Ary siramamy ?"
+                },
+                {
+                  "speaker": "Miora",
+                  "fr": "Non merci, j'en ai déjà à la maison !",
+                  "mg": "Misaotra, efa misy amin'izany amiko ao an-trano !"
                 }
               ],
               "key_vocabulary": [
-                "Un kilo de... / Un litre de..."
+                "Un kilo de",
+                "J'en prends",
+                "J'en ai",
+                "Épicerie"
               ]
             },
             "activities": {
@@ -4669,14 +5005,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Fiantsenana amin'ny fivarotana sy ny lanja (Magasins, quantités et le pronom En)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Exprimer des quantités précises et imprécises (un kilo de, une bouteille de, un peu de)",
+              "Utiliser le pronom 'EN' pour remplacer une quantité ('J'en prends deux')",
+              "Faire des courses en épicerie ou supermarché"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Fiantsenana amin'ny fivarotana sy ny lanja (Magasins, quantités et le pronom En)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Milaza lanjany sy habetsahany (un kilo de, une bouteille de)",
+              "Hampiasa ny pronom 'EN' hanoloana laharana/habetsahany",
+              "Miantseny ao amin me fivarotana na supermarché"
             ]
           }
         },
@@ -4740,14 +5076,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Aiza no apetraka ny pronom COD 'le / la / les' amin'ny fehezanteny?",
+                "question": "Ahoana no hanoloana ny COD : 'Je visite la ville' -> 'Je ___ visite' ?",
                 "options": [
-                  "Anoloan'ny matoanteny (verbe)",
-                  "Aorian'ny matoanteny",
-                  "Amin'ny faran'ny fehezanteny",
-                  "Tsy misy toerana raikitra"
+                  "Je la visite (COD féminin)",
+                  "Je le visite",
+                  "Je en visite",
+                  "Je lui visite"
                 ],
-                "answer": "Anoloan'ny matoanteny (verbe)"
+                "answer": "Je la visite (COD féminin)"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'Je voudrais réserver une chambre'",
+                "options": [
+                  "Mba te-hamandrika efitrano aho",
+                  "Mba te-hanadio efitrano aho",
+                  "Mba te-hivarotra efitrano aho",
+                  "Mba te-hahita efitrano aho"
+                ],
+                "answer": "Mba te-hamandrika efitrano aho"
               }
             ],
             "pronunciation": [
@@ -4770,32 +5117,40 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Fitetezan-tany sy fialantsasatra (Voyages, réservation et pronoms COD)",
-              "situation": "Mise en situation réelle pour la leçon: Fitetezan-tany sy fialantsasatra (Voyages, réservation et pronoms COD).",
+              "title": "Réserver une chambre d'hôtel à Nosy Be",
+              "situation": "Nirina appelle la réception d'un hôtel à Nosy Be.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Réceptionniste",
+                  "role": "Hôtelier"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Nirina",
+                  "role": "Voyageur"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Réserver un billet, comment allez-vous ?",
-                  "mg": "Namandrika tapakila, manao ahoana ny fahasalamana ?"
+                  "speaker": "Réceptionniste",
+                  "fr": "Hôtel Le Lagon à Nosy Be, bonjour !",
+                  "mg": "Hôtel Le Lagon any Nosy Be, manao ahoana !"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Nirina",
+                  "fr": "Bonjour, je voudrais réserver une chambre double pour trois nuits du 10 au 13 août.",
+                  "mg": "Manao ahoana, mba te-hamandrika efitrano double mandritra ny alina 3 aho."
+                },
+                {
+                  "speaker": "Réceptionniste",
+                  "fr": "Très bien. Je vous confirme la réservation par e-mail immédiatement !",
+                  "mg": "Tsara dia tsara. Hanamarika ny famandrihana tamin me e-mail aminao aho izao !"
                 }
               ],
               "key_vocabulary": [
-                "Réserver un billet"
+                "Réserver une chambre",
+                "Pour trois nuits",
+                "Pronom COD",
+                "Nosy Be"
               ]
             },
             "activities": {
@@ -4877,14 +5232,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Fitetezan-tany sy fialantsasatra (Voyages, réservation et pronoms COD)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Réserver une chambre d'hôtel ou un billet de voyage",
+              "Utiliser les pronoms compléments d'objet direct COD (le, la, les)",
+              "Demander des informations touristiques sur une destination"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Fitetezan-tany sy fialantsasatra (Voyages, réservation et pronoms COD)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mamandrika efitrano amin me hôtely na tapakila fitaterana",
+              "Hampiasa ny pronoms COD (le, la, les)",
+              "Manontany fampahalalana fizahan-tany"
             ]
           }
         },
@@ -4898,9 +5253,9 @@
               {
                 "word": "Allô, je voudrais parler à...",
                 "phonetic": "alo ʒə vudʁɛ paʁle a",
-                "translation": "Alô, mba te-hitensy amin'i... aho",
+                "translation": "Alô, mba te-hiteny amin'i... aho",
                 "example": "Allô bonjour, je voudrais parler à M. Rabe s'il vous plaît.",
-                "example_translation": "Alô manao ahoana, mba te-hitensy amin'i Atoa Rabe azafady.",
+                "example_translation": "Alô manao ahoana, mba te-hiteny amin'i Atoa Rabe azafady.",
                 "priority": "essential",
                 "ipa": "[alo ʒə vudʁɛ paʁle a]"
               },
@@ -4948,14 +5303,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no pronom COI ampiasaina ho an'ny hoe 'à Marie' (olona iray)?",
+                "question": "Ahoana no hilazana amin me telefona hoe 'Mba te-hiteny amin'i Atoa Rabe aho azafady' ?",
                 "options": [
-                  "Lui",
-                  "Leur",
-                  "La",
-                  "Le"
+                  "Je voudrais parler à Monsieur Rabe s'il vous plaît.",
+                  "Donne moi Monsieur Rabe !",
+                  "Où est Monsieur Rabe ?",
+                  "Monsieur Rabe écoute moi."
                 ],
-                "answer": "Lui"
+                "answer": "Je voudrais parler à Monsieur Rabe s'il vous plaît."
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'C'est de la part de qui ?'",
+                "options": [
+                  "Avy amin'iza azafady ?",
+                  "Iza no anaranao eny amin me lalana ?",
+                  "Miantso aiza ianao ?",
+                  "Ahoana no fahasalamana ?"
+                ],
+                "answer": "Avy amin'iza azafady ?"
               }
             ],
             "pronunciation": [
@@ -4966,44 +5332,62 @@
                 "advice_mg": "Tandremo tsara ny fanononana ny feo sy ny intonation amin'ity lesona ity.",
                 "advice_fr": "Portez une attention particulière à l'intonation et au rythme de la phrase.",
                 "example_fr": "Allô, je voudrais parler à...",
-                "example_mg": "Alô, mba te-hitensy amin'i... aho"
+                "example_mg": "Alô, mba te-hiteny amin'i... aho"
               }
             ],
             "expressions": [
               {
                 "register": "courant",
                 "fr": "Allô bonjour, je voudrais parler à M. Rabe s'il vous plaît.",
-                "mg": "Alô manao ahoana, mba te-hitensy amin'i Atoa Rabe azafady.",
+                "mg": "Alô manao ahoana, mba te-hiteny amin'i Atoa Rabe azafady.",
                 "context": "Utilisation courante dans la vie quotidienne."
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Miantso amin'ny telefona sy famelana hafatra (Téléphone, demandes et messages)",
-              "situation": "Mise en situation réelle pour la leçon: Miantso amin'ny telefona sy famelana hafatra (Téléphone, demandes et messages).",
+              "title": "Passer un coup de fil au bureau",
+              "situation": "Rakoto appelle le secrétariat pour parler au directeur.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Secrétaire",
+                  "role": "Accueil téléphonique"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Rakoto",
+                  "role": "Appelant"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Allô, je voudrais parler à..., comment allez-vous ?",
-                  "mg": "Alô, mba te-hitensy amin'i... aho, manao ahoana ny fahasalamana ?"
+                  "speaker": "Secrétaire",
+                  "fr": "Société ABC, bonjour ! En quoi puis-je vous aider ?",
+                  "mg": "Société ABC, manao ahoana ! Inona no azoko ampiana anao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Rakoto",
+                  "fr": "Bonjour, je voudrais parler à Monsieur Rabe s'il vous plaît.",
+                  "mg": "Manao ahoana, mba te-hiteny amin'i Atoa Rabe azafady."
+                },
+                {
+                  "speaker": "Secrétaire",
+                  "fr": "C'est de la part de qui ?",
+                  "mg": "Avy amin'iza azafady ?"
+                },
+                {
+                  "speaker": "Rakoto",
+                  "fr": "C'est de la part de Monsieur Rakoto. C'est urgent.",
+                  "mg": "Avy amin'i Atoa Rakoto. Maimaika izany."
+                },
+                {
+                  "speaker": "Secrétaire",
+                  "fr": "Un instant s'il vous plaît, je vous mets en liaison.",
+                  "mg": "Minitra iray azafady, ampidiriko aminy ianao."
                 }
               ],
               "key_vocabulary": [
-                "Allô, je voudrais parler à..."
+                "Je voudrais parler à",
+                "C'est de la part de",
+                "Un instant",
+                "Message"
               ]
             },
             "activities": {
@@ -5030,7 +5414,7 @@
               "shadowing": {
                 "title": "Pratique de Shadowing - Miantso amin'ny telefona sy famelana hafatra (Téléphone, demandes et messages)",
                 "phrase_fr": "Allô bonjour, je voudrais parler à M. Rabe s'il vous plaît.",
-                "phrase_mg": "Alô manao ahoana, mba te-hitensy amin'i Atoa Rabe azafady."
+                "phrase_mg": "Alô manao ahoana, mba te-hiteny amin'i Atoa Rabe azafady."
               }
             },
             "review": {
@@ -5085,14 +5469,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Miantso amin'ny telefona sy famelana hafatra (Téléphone, demandes et messages)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Passer un appel téléphonique professionnel ou personnel court",
+              "Laisser un message vocal ou transmettre un message à un collègue",
+              "Utiliser la formule correcte : 'Je voudrais parler à... / C'est de la part de...'"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Miantso amin'ny telefona sy famelana hafatra (Téléphone, demandes et messages)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Miantso amin me telefona amin me fomba ara-panajana sy mazava",
+              "Mamela hafatra na mandefa hafatra ho an'ny mpiara-miasa",
+              "Hampiasa ny 'Je voudrais parler à... / C'est de la part de...'"
             ]
           }
         }
@@ -5163,25 +5547,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no fomba famaranana e-mail ara-pomba ampiasaina matetika?",
+                "question": "Inona no formule de politesse ampiasaina amin me e-mail pro ara-panjakana (formel) ?",
                 "options": [
-                  "Salut bye",
-                  "Cordialement",
-                  "A demain gros",
-                  "Bisous"
+                  "Veuillez agréer, Monsieur, l'expression de mes salutations distinguées.",
+                  "Salut bisous !",
+                  "À plus tard !",
+                  "Tchao bye bye !"
                 ],
-                "answer": "Cordialement"
+                "answer": "Veuillez agréer, Monsieur, l'expression de mes salutations distinguées."
               },
               {
                 "type": "translate",
-                "question": "Adika amin'ny teny frantsay: 'Ahitana ny CV-ko anaty rakitra ampiarahina'",
+                "question": "Adika amin'ny teny malagasy: 'Objet de l'e-mail'",
                 "options": [
-                  "Voici mon CV",
-                  "Veuillez trouver mon CV en pièce jointe",
-                  "Mon CV est perdu",
-                  "Je n'ai pas de CV"
+                  "Lohahevitry ny e-mail",
+                  "Famaranana ny e-mail",
+                  "Sary amin me e-mail",
+                  "Anaran'ny mpanoratra"
                 ],
-                "answer": "Veuillez trouver mon CV en pièce jointe"
+                "answer": "Lohahevitry ny e-mail"
               }
             ],
             "pronunciation": [
@@ -5204,32 +5588,35 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Manoratra e-mail sy taratasy ara-pomba (E-mails & Correspondance professionnelle)",
-              "situation": "Mise en situation réelle pour la leçon: Manoratra e-mail sy taratasy ara-pomba (E-mails & Correspondance professionnelle).",
+              "title": "Conseils pour écrire un e-mail professionnel",
+              "situation": "Valisoa demande de l'aide à son professeur avant d'envoyer sa candidature.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Professeur",
+                  "role": "Formateur"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Valisoa",
+                  "role": "Apprenant B1"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Madame, Monsieur, comment allez-vous ?",
-                  "mg": "Ramatoa, Tompoko, manao ahoana ny fahasalamana ?"
+                  "speaker": "Valisoa",
+                  "fr": "Monsieur, pouvez-vous relire mon e-mail de candidature pour le stage ?",
+                  "mg": "Tompoko, afaka mamaky ny e-mail fangatahana stage nataoko ve ianao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Professeur",
+                  "fr": "Oui. N'oubliez pas d'indiquer l'objet clairement et de terminer par : 'Veuillez agréer, Monsieur, mes salutations distinguées'.",
+                  "mg": "Eny. Aza adino ny manoratra ny objet mazava sy mamarana amin me : 'Veuillez agréer, Monsieur, mes salutations distinguées'."
                 }
               ],
               "key_vocabulary": [
-                "Madame, Monsieur"
+                "Objet de l'e-mail",
+                "Veuillez agréer",
+                "Cordialement",
+                "Candidature"
               ]
             },
             "activities": {
@@ -5311,14 +5698,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Manoratra e-mail sy taratasy ara-pomba (E-mails & Correspondance professionnelle)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Rédiger un courriel professionnel structuré (objet, formules de politesse, corps de message)",
+              "Formuler une demande formelle d'information ou de candidature",
+              "Adapter le niveau de langue selon le destinataire"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Manoratra e-mail sy taratasy ara-pomba (E-mails & Correspondance professionnelle)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manoratra e-mail ara-pomba sy ara-panjakana (objet, formules de politesse)",
+              "Manao fangatahana ara-pomba vaovao na fotoana",
+              "Hampifanaraka ny fiteny araka ny olona antsoratana"
             ]
           }
         },
@@ -5332,29 +5719,38 @@
               {
                 "word": "Parce que / Car",
                 "phonetic": "paʁskə / kaʁ",
-                "translation": "Manojo / Satria",
-                "example": "Je révise parce que je veux réussir l'examen.",
-                "example_translation": "Mamerina aho satria te hahomby amin'ny fanadinana.",
-                "priority": "essential",
-                "ipa": "[paʁskə / kaʁ]"
+                "ipa": "[paʁs.kə] / [kaʁ]",
+                "translation": "Satria / Noho ny antony",
+                "example": "Il est absent parce qu'il est malade.",
+                "example_translation": "Tsy eo izy satria marary.",
+                "priority": "essential"
               },
               {
-                "word": "Grâce à / À cause de",
-                "phonetic": "ɡʁas a / a koz də",
-                "translation": "Noho ny fitahian'ny... / Noho ny olana...",
-                "example": "Grâce à son travail, il a obtenu une promotion.",
-                "example_translation": "Noho ny ezaka nataony dia nahazo fisondrotana izy.",
-                "priority": "essential",
-                "ipa": "[ɡʁas a / a koz də]"
+                "word": "Grâce à",
+                "phonetic": "ɡʁɑs a",
+                "ipa": "[ɡʁɑs a]",
+                "translation": "Noho ny fiatsanganana tsara / Misaotra amin'ny...",
+                "example": "J'ai réussi grâce à mes efforts.",
+                "example_translation": "Tafita aho noho ny ezaka nataoko.",
+                "priority": "essential"
               },
               {
-                "word": "Par conséquent / Donc",
-                "phonetic": "paʁ kɔ̃sekɑ̃ / dɔ̃k",
-                "translation": "Koa noho izany / Izany hoe",
-                "example": "Il a plus de travail, donc il part plus tard.",
-                "example_translation": "Manana asa betsaka kokoa izy, koa noho izany mandeha aoriana kokoa izy.",
-                "priority": "essential",
-                "ipa": "[paʁ kɔ̃sekɑ̃ / dɔ̃k]"
+                "word": "À cause de",
+                "phonetic": "a koz də",
+                "ipa": "[a koz də]",
+                "translation": "Noho ny (antony ratsy / olana)",
+                "example": "Le vol est annulé à cause de la pluie.",
+                "example_translation": "Nofoanana ny sidina noho ny orana.",
+                "priority": "essential"
+              },
+              {
+                "word": "Donc / Par conséquent",
+                "phonetic": "dɔ̃k / paʁ kɔ̃sekɑ̃",
+                "ipa": "[dɔ̃k] / [paʁ kɔ̃.se.kɑ̃]",
+                "translation": "Ka noho izany / Vokany",
+                "example": "Il pleut, donc je prends mon parapluie.",
+                "example_translation": "Avy ny orana, ka noho izany mandray elo aho.",
+                "priority": "essential"
               }
             ],
             "grammar": {
@@ -5382,14 +5778,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no mpampiankina ampiasaina amin'ny antony tsara noho ny ezaka?",
+                "question": "Inona no fampiasa amin me antony TSARA na MAHASOA (élément positif) ?",
                 "options": [
-                  "À cause de",
                   "Grâce à",
-                  "Malgré",
-                  "Jamais"
+                  "À cause de",
+                  "Par conséquent",
+                  "Pourtant"
                 ],
                 "answer": "Grâce à"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Inona no connecteur ilazana VOKANY (conséquence) ?",
+                "options": [
+                  "Donc / Par conséquent",
+                  "Parce que",
+                  "Car",
+                  "Puisque"
+                ],
+                "answer": "Donc / Par conséquent"
               }
             ],
             "pronunciation": [
@@ -5400,7 +5807,7 @@
                 "advice_mg": "Tandremo tsara ny fanononana ny feo sy ny intonation amin'ity lesona ity.",
                 "advice_fr": "Portez une attention particulière à l'intonation et au rythme de la phrase.",
                 "example_fr": "Parce que / Car",
-                "example_mg": "Manojo / Satria"
+                "example_mg": "Satria / Noho ny"
               }
             ],
             "expressions": [
@@ -5412,59 +5819,72 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-              "situation": "Mise en situation réelle pour la leçon: Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence).",
+              "title": "Expliquer un retard au travail",
+              "situation": "Haja explique la cause de son retard à sa responsable RH.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Responsable",
+                  "role": "Chef de projet"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Haja",
+                  "role": "Employé"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Parce que / Car, comment allez-vous ?",
-                  "mg": "Manojo / Satria, manao ahoana ny fahasalamana ?"
+                  "speaker": "Responsable",
+                  "fr": "Bonjour Haja. Pourquoi es-tu arrivé en retard ce matin ?",
+                  "mg": "Manao ahoana Haja. Nahoana ianao no tara androany maraina ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Haja",
+                  "fr": "Bonjour. Je suis arrivé en retard à cause des embouteillages monstres sur la route d'Anosy.",
+                  "mg": "Manao ahoana. Tara aho noho ny fitohanan'ny fiara be tamin me lalana any Anosy."
+                },
+                {
+                  "speaker": "Responsable",
+                  "fr": "Ah je comprends. Et cela a eu des conséquences sur la réunion ?",
+                  "mg": "Aazoko izany. Ary nisy vokany amin me fivoriana ve izany ?"
+                },
+                {
+                  "speaker": "Haja",
+                  "fr": "Non, heureusement, car j'avais envoyé mon rapport à l'avance par e-mail !",
+                  "mg": "Tsy nisy, satria efa nandefa ny tatitra tamin me e-mail mialoha aho !"
                 }
               ],
               "key_vocabulary": [
-                "Parce que / Car"
+                "À cause de",
+                "Parce que",
+                "Grâce à",
+                "Par conséquent"
               ]
             },
             "activities": {
               "listening": {
-                "title": "Compréhension Orale - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-                "instruction_fr": "Écoutez l'enregistrement et identifiez les éléments clés.",
-                "instruction_mg": "Hainoy ny fandraisam-peo ary valio ny fanontaniana."
+                "title": "Repérer les connecteurs de cause et conséquence",
+                "instruction_fr": "Écoutez le témoignage et notez si la personne exprime une cause (parce que/grâce à) ou une conséquence (donc/c'est pourquoi).",
+                "instruction_mg": "Hainoy ny fandraisam-peo ary teneno na antony na vokany no ambarany."
               },
               "speaking": {
-                "title": "Production Orale - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-                "instruction_fr": "Exprimez-vous à voix haute en utilisant les structures de la leçon.",
-                "instruction_mg": "Mitenena amin'ny feo mahery amin'ny fampiasana ny fampianarana."
+                "title": "Justifier une absence ou un retard (Tâche B1)",
+                "instruction_fr": "Imaginez que vous avez manqué un rendez-vous important. Expliquez la cause (avec à cause de / parce que) et proposez une solution en 1 minute à voix haute.",
+                "instruction_mg": "Hazavao am-bava ny antony tsy nahatongavanao sy ny vokany tamin me 1 minitra."
               },
               "reading": {
-                "title": "Compréhension Écrite - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-                "instruction_fr": "Lisez le texte et repérez les mots importants.",
-                "instruction_mg": "Vakio ny lahatsoratra ary tadiavo ny teny manan-danja."
+                "title": "Analyse de texte argumentatif court",
+                "instruction_fr": "Lisez l'article sur la protection des forêts à Madagascar et relevez 3 connecteurs logiques de cause et conséquence.",
+                "instruction_mg": "Vakio ny lahatsoratra momba ny ala ary tadiavo ny connecteurs logiques 3."
               },
               "writing": {
-                "title": "Production Écrite - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-                "instruction_fr": "Rédigez 2 à 3 phrases courtes sur le sujet.",
-                "instruction_mg": "Manorata fehezanteny fohy 2 na 3 momba ny lohahevitra."
+                "title": "Rédaction d'un paragraphe de justification (Tâche B1)",
+                "instruction_fr": "Rédigez un paragraphe de 60 à 80 mots expliquant pourquoi le télétravail se développe (utilisez au moins 1 fois 'parce que', 1 fois 'grâce à' et 1 fois 'par conséquent').",
+                "instruction_mg": "Manorata lahatsoratra 60-80 teny manazava ny lalana amin me 'parce que', 'grâce à', 'par conséquent'."
               },
               "shadowing": {
-                "title": "Pratique de Shadowing - Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-                "phrase_fr": "Je révise parce que je veux réussir l'examen.",
-                "phrase_mg": "Mamerina aho satria te hahomby amin'ny fanadinana."
+                "title": "Répétition de connecteurs logiques",
+                "phrase_fr": "J'ai réussi mon examen grâce à mon travail régulier.",
+                "phrase_mg": "Tafita amin me fanadinana aho noho ny ezaka tsy tapaka nataoko."
               }
             },
             "review": {
@@ -5519,14 +5939,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Exprimer la cause avec 'parce que', 'car', 'comme', 'grâce à', 'à cause de'",
+              "Exprimer la conséquence avec 'donc', 'par conséquent', 'c'est pourquoi'",
+              "Rédiger un paragraphe explicatif structuré sur un problème quotidien"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Hilaza ny antony sy ny vokany (Exprimer la cause et la conséquence)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Milaza ny antony ampiasana ny 'parce que', 'car', 'grâce à', 'à cause de'",
+              "Milaza ny vokany ampiasana ny 'donc', 'par conséquent', 'c'est pourquoi'",
+              "Manoratra lahatsoratra fohy manazava antony sy vokany"
             ]
           }
         },
@@ -5590,14 +6010,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana amin'ny Futur Simple hoe 'Hiasa aho'?",
+                "question": "Conjugaison du verbe AVOIR au Futur Simple avec 'JE':",
                 "options": [
-                  "Je travaille",
-                  "Je travaillerai",
-                  "J'ai travaillé",
-                  "Je travaillais"
+                  "J'aurai",
+                  "J'avais",
+                  "J'ai eu",
+                  "Je serai"
                 ],
-                "answer": "Je travaillerai"
+                "answer": "J'aurai"
+              },
+              {
+                "type": "translate",
+                "question": "Adika amin'ny teny malagasy: 'Je travaillerai à Antananarivo'",
+                "options": [
+                  "Hiasa ao Antananarivo aho",
+                  "Niasa ao Antananarivo aho",
+                  "Miasa ao Antananarivo aho",
+                  "Tsy miasa ao Antananarivo aho"
+                ],
+                "answer": "Hiasa ao Antananarivo aho"
               }
             ],
             "pronunciation": [
@@ -5620,32 +6051,35 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Hitantara ny hoavy sy tetikasa (Projets d'avenir et Futur simple)",
-              "situation": "Mise en situation réelle pour la leçon: Hitantara ny hoavy sy tetikasa (Projets d'avenir et Futur simple).",
+              "title": "Discuter de ses projets professionnels",
+              "situation": "Toky et Fanja discutent de leurs ambitions après l'université.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Toky",
+                  "role": "Étudiant B1"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Fanja",
+                  "role": "Étudiante B1"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "Dans l'avenir, comment allez-vous ?",
-                  "mg": "Amin'ny hoavy, manao ahoana ny fahasalamana ?"
+                  "speaker": "Toky",
+                  "fr": "Qu'est-ce que tu feras après l'obtention de ton diplôme, Fanja ?",
+                  "mg": "Inona no hataonao aoriana amin me fahazoana ny diplôma, Fanja ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Fanja",
+                  "fr": "L'année prochaine, je travaillerai dans une entreprise internationale et je voyagerai en Afrique !",
+                  "mg": "Ny taona ho avy, hiasa amin me enterprise internationale aho ary handeha hitsidika an'i Afrika !"
                 }
               ],
               "key_vocabulary": [
-                "Dans l'avenir"
+                "Je travaillerai",
+                "Je voyagerai",
+                "L'année prochaine",
+                "Futur simple"
               ]
             },
             "activities": {
@@ -5727,14 +6161,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Hitantara ny hoavy sy tetikasa (Projets d'avenir et Futur simple)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Conjuguer les verbes au Futur Simple de l'indicatif",
+              "Exprimer ses projets personnels et professionnels à moyen et long terme",
+              "Rédiger un paragraphe sur ses ambitions pour les 5 prochaines années"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Hitantara ny hoavy sy tetikasa (Projets d'avenir et Futur simple)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mampifanaraka ny verbes amin me Futur Simple",
+              "Milaza ny tetikasa sy ny finiavana ho an'ny hoavy",
+              "Manoratra momba ny vinavina amin me 5 taona ho avy"
             ]
           }
         }
@@ -5805,14 +6239,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Inona no maingoka ampiasaiko aorian'ny 'Il faut que'?",
+                "question": "Inona no modalité fampiasa amin me Subjonctif aoriana amin me 'Bien que' ?",
                 "options": [
-                  "Le Subjonctif",
-                  "L'indicatif présent",
-                  "Le passé composé",
-                  "L'impératif"
+                  "Bien qu'il FASSE beau (Subjonctif)",
+                  "Bien qu'il FAIT beau (Indicatif)",
+                  "Bien qu'il FERA beau (Futur)",
+                  "Bien qu'il A FAIT beau (Passé)"
                 ],
-                "answer": "Le Subjonctif"
+                "answer": "Bien qu'il FASSE beau (Subjonctif)"
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Inona no fampiasa amin me fanehoana CONCESSION (ady hevitra) ?",
+                "options": [
+                  "Certes... néanmoins / bien que",
+                  "Parce que / car",
+                  "Premièrement / Deuxièmement",
+                  "C'est pourquoi / donc"
+                ],
+                "answer": "Certes... néanmoins / bien que"
               }
             ],
             "pronunciation": [
@@ -5835,59 +6280,71 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-              "situation": "Mise en situation réelle pour la leçon: Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation).",
+              "title": "Débat radio sur le développement durable",
+              "situation": "Deux invités débattent de la transition écologique à la radio.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Journaliste",
+                  "role": "Modérateur"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "M. Rabe",
+                  "role": "Économiste"
+                },
+                {
+                  "name": "Mme Razafy",
+                  "role": "Écologiste"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "D'une part... d'autre part, comment allez-vous ?",
-                  "mg": "Atsy an-daniny... etsy an-kilany, manao ahoana ny fahasalamana ?"
+                  "speaker": "Journaliste",
+                  "fr": "Bienvenue chers auditeurs. Faut-il investir massivement dans les énergies renouvelables ?",
+                  "mg": "Tongao soa ny mpihaino. Tokony hampiasa vola be amin me énergies renouvelables ve ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Mme Razafy",
+                  "fr": "Certes, cela demande un investissement initial élevé, mais à long terme, c'est indispensable pour notre environnement.",
+                  "mg": "Eny tokoa, mila fampiasana vola be amin me voalohany izany, fa amin me hoavy maharitra kosa dia tsy azo ialana amin me tontolo iainana."
+                },
+                {
+                  "speaker": "M. Rabe",
+                  "fr": "Je comprends votre point de vue, cependant il ne faut pas négliger l'impact immédiat sur le pouvoir d'achat des ménages.",
+                  "mg": "Aazoko ny hevitrao, saingy tsy tokony hohadinoina ny fiantraikany avy hatrany amin me fahefa-mividy."
                 }
               ],
               "key_vocabulary": [
-                "D'une part... d'autre part"
+                "Certes... mais",
+                "Cependant",
+                "Point de vue",
+                "À long terme"
               ]
             },
             "activities": {
               "listening": {
-                "title": "Compréhension Orale - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-                "instruction_fr": "Écoutez l'enregistrement et identifiez les éléments clés.",
-                "instruction_mg": "Hainoy ny fandraisam-peo ary valio ny fanontaniana."
+                "title": "Analyse d'un débat d'idées radio (Tâche B2)",
+                "instruction_fr": "Écoutez l'extrait de débat sur l'impact de l'intelligence artificielle sur l'emploi. Identifiez la thèse de chaque intervenant, un argument principal et une concession.",
+                "instruction_mg": "Hainoy ny adihevitra ary havoahy ny hevitra lehibe, argument ary concession iray."
               },
               "speaking": {
-                "title": "Production Orale - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-                "instruction_fr": "Exprimez-vous à voix haute en utilisant les structures de la leçon.",
-                "instruction_mg": "Mitenena amin'ny feo mahery amin'ny fampiasana ny fampianarana."
+                "title": "Prise de parole argumentée en continu (Tâche orale B2)",
+                "instruction_fr": "Sujet B2 : 'Faut-il rendre le télétravail obligatoire 2 jours par semaine ?' Exprimez votre point de vue pendant 2 minutes. Structurez votre propos : introduction, 2 arguments illustrés, un contre-argument réfuté et une conclusion.",
+                "instruction_mg": "Mitenena mandritra ny 2 minitra momba ny télétravail avec 2 arguments, contre-argument sy conclusion."
               },
               "reading": {
-                "title": "Compréhension Écrite - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-                "instruction_fr": "Lisez le texte et repérez les mots importants.",
-                "instruction_mg": "Vakio ny lahatsoratra ary tadiavo ny teny manan-danja."
+                "title": "Compréhension critique d'un essai argumentatif",
+                "instruction_fr": "Lisez la tribune sur la transition écologique. Relevez les articulateurs de concession (pourtant, néanmoins, bien que) et les formules de nuance.",
+                "instruction_mg": "Vakio ny lahatsoratra ary tadiavo ny mpanatanteraka nuance sy concession."
               },
               "writing": {
-                "title": "Production Écrite - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-                "instruction_fr": "Rédigez 2 à 3 phrases courtes sur le sujet.",
-                "instruction_mg": "Manorata fehezanteny fohy 2 na 3 momba ny lohahevitra."
+                "title": "Essai argumentatif structuré (Épreuve écrite DELF B2)",
+                "instruction_fr": "Consigne DELF B2 : Vous écrivez une lettre formelle au maire de votre ville (180 à 220 mots) pour défendre le développement des transports en commun écologiques. Utilisez au moins 4 connecteurs logiques avancés et une structure en 3 paragraphes.",
+                "instruction_mg": "Manorata taratasy ara-panjakana 180-220 teny ho an'ny ben'ny tanàna manangana ady hevitra tsara."
               },
               "shadowing": {
-                "title": "Pratique de Shadowing - Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-                "phrase_fr": "D'une part c'est économique, d'autre part c'est écologique.",
-                "phrase_mg": "Atsy an-daniny mitsitsy vola izany, etsy an-kilany miaro ny tontolo iainana."
+                "title": "Articulation de formules de débat B2",
+                "phrase_fr": "Certes, cette mesure présente des inconvénients, mais ses bénéfices à long terme sont incontestables.",
+                "phrase_mg": "Ahoana izany, misy olana ity fepetra ity, fa ny tombontsoa maharitra kosa dia tsy azo lavina."
               }
             },
             "review": {
@@ -5942,14 +6399,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Développer une argumentation structurée avec thèse, arguments et exemples",
+              "Exprimer la concession et la nuance (Certes... mais, bien que + subjonctif)",
+              "Défendre sa prise de position lors d'un débat formel oral ou écrit (Niveau B2)"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Ady hevitra sy fanehoan-kevitra voarindra (Le débat d'idées et l'argumentation)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Manangana ady hevitra voarindra misy arguments sy exemples",
+              "Hampiasa ny nuance sy la concession (Certes... mais, bien que)",
+              "Mijoro sy miaro ny hevitra amin me adihevitra am-bava na an-tsoratra (B2)"
             ]
           }
         },
@@ -6013,14 +6470,25 @@
             "quiz": [
               {
                 "type": "multiple-choice",
-                "question": "Ahoana no ilazana amin'ny voix passive hoe 'Efa neken'ny filankevitra ilay tetikasa'?",
+                "question": "Ahoana no famadihana amin me Voix Passive : 'Le ministre a inauguré le centre' ?",
                 "options": [
-                  "Le projet a été approuvé par le conseil",
-                  "Le conseil approuve le projet",
-                  "Le projet va être fait",
-                  "Le conseil refuse le projet"
+                  "Le centre a été inauguré par le ministre.",
+                  "Le centre inaugurait par le ministre.",
+                  "Le ministre est inauguré par le centre.",
+                  "Le centre sera inauguré le ministre."
                 ],
-                "answer": "Le projet a été approuvé par le conseil"
+                "answer": "Le centre a été inauguré par le ministre."
+              },
+              {
+                "type": "multiple-choice",
+                "question": "Inona no mpanampy (auxiliaire) ampiasaina foana amin me Voix Passive ?",
+                "options": [
+                  "Auxiliaire ÊTRE",
+                  "Auxiliaire AVOIR",
+                  "Verbe FAIRE",
+                  "Verbe ALLER"
+                ],
+                "answer": "Auxiliaire ÊTRE"
               }
             ],
             "pronunciation": [
@@ -6043,59 +6511,67 @@
               }
             ],
             "dialogue": {
-              "title": "Dialogue pratique - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-              "situation": "Mise en situation réelle pour la leçon: Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive).",
+              "title": "Revue de presse économique",
+              "situation": "Deux analystes échangent sur le commerce et les exportations.",
               "characters": [
                 {
-                  "name": "Locuteur A",
-                  "role": "Guide / Ami"
+                  "name": "Analyste 1",
+                  "role": "Économiste"
                 },
                 {
-                  "name": "Locuteur B",
-                  "role": "Apprenant"
+                  "name": "Analyste 2",
+                  "role": "Spécialiste commerce"
                 }
               ],
               "lines": [
                 {
-                  "speaker": "Locuteur A",
-                  "fr": "La mondialisation / L'innovation, comment allez-vous ?",
-                  "mg": "Ny fizorana amin'ny tontolo / Ny zava-shaovao, manao ahoana ny fahasalamana ?"
+                  "speaker": "Analyste 1",
+                  "fr": "Avez-vous suivi la conférence sur l'exportation de vanille ?",
+                  "mg": "Nanaraka ny fivoriana momba ny fanondranana vanille ve ianao ?"
                 },
                 {
-                  "speaker": "Locuteur B",
-                  "fr": "Très bien, merci ! Et vous ?",
-                  "mg": "Tsara dia tsara, misaotra ! Ary ianao ?"
+                  "speaker": "Analyste 2",
+                  "fr": "Oui ! De nouveaux accords ont été signés par le gouvernement pour valoriser les produits locaux.",
+                  "mg": "Eny ! Nisy fifanarahana vaovao natao sonia tamin me fitondram-panjakana mba hanatsarana ny vokatra any an-toerana."
+                },
+                {
+                  "speaker": "Analyste 1",
+                  "fr": "Ces mesures seront appliquées dès le mois prochain par l'ensemble des acteurs du secteur.",
+                  "mg": "Ireo fepetra ireo dia hampiharina manomboka amin me volana ho avy amin me mpisehatra rehetra."
                 }
               ],
               "key_vocabulary": [
-                "La mondialisation / L'innovation"
+                "Ont été signés",
+                "Sera appliqué par",
+                "Accords",
+                "Valoriser"
               ]
             },
             "activities": {
               "listening": {
-                "title": "Compréhension Orale - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-                "instruction_fr": "Écoutez l'enregistrement et identifiez les éléments clés.",
-                "instruction_mg": "Hainoy ny fandraisam-peo ary valio ny fanontaniana."
+                "title": "Écoute d'une chronique économique (Tâche B2)",
+                "instruction_fr": "Écoutez le reportage sur les exportations de vanille et de cacao de Madagascar. Relevez 3 structures à la voix passive utilisées par le journaliste.",
+                "instruction_mg": "Hainoy ny tatitra toekarena ary tadiavo ny fehezanteny 3 amin me voix passive."
               },
               "speaking": {
-                "title": "Production Orale - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-                "instruction_fr": "Exprimez-vous à voix haute en utilisant les structures de la leçon.",
-                "instruction_mg": "Mitenena amin'ny feo mahery amin'ny fampiasana ny fampianarana."
+                "title": "Présentation orale d'un projet d'entreprise (Tâche B2)",
+                "instruction_fr": "Présentez à un investisseur potentiel un projet d'écotourisme ou d'exportation durable à Madagascar (2 minutes d'exposé fluide avec registre soutenu/professionnel).",
+                "instruction_mg": "Hanolotra tetikasa toekarena am-bava amin me fiteny ara-panjakana sy ara-toekarena."
               },
               "reading": {
-                "title": "Compréhension Écrite - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-                "instruction_fr": "Lisez le texte et repérez les mots importants.",
-                "instruction_mg": "Vakio ny lahatsoratra ary tadiavo ny teny manan-danja."
+                "title": "Synthèse de documents de presse francophone",
+                "instruction_fr": "Lisez l'article de presse et résumez en 3 points clés les défis du commerce équitable en Afrique francophone.",
+                "instruction_mg": "Vakio ny lahatsoratra gazety ary fintino amin me teboka 3 lehibe."
               },
               "writing": {
-                "title": "Production Écrite - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-                "instruction_fr": "Rédigez 2 à 3 phrases courtes sur le sujet.",
-                "instruction_mg": "Manorata fehezanteny fohy 2 na 3 momba ny lohahevitra."
+                "title": "Rédaction d'un compte-rendu professionnel à la voix passive",
+                "instruction_fr": "Transformez 5 phrases d'un compte-rendu de réunion à la voix passive (ex: 'Le directeur a signé le contrat' -> 'Le contrat a été signé par le directeur').",
+                "instruction_mg": "Manoratra sy mamadika fehezanteny 5 ho amin me voix passive."
               },
               "shadowing": {
-                "title": "Pratique de Shadowing - Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-                "phrase_fr": "L'innovation est le moteur des entreprises modernes.",
-                "phrase_mg": "Ny zava-mavao no motera tosika ny orinasa maoderina."
+                "title": "Répétition de tournures journalistiques",
+                "phrase_fr": "Ce nouvel accord de partenariat a été signé hier par les deux ministres.",
+                "phrase_mg": "Natao sonia omaly tamin me minisitra roa ity fifanarahana fiaraha-miasa vaovao ity."
               }
             },
             "review": {
@@ -6150,14 +6626,14 @@
           },
           "objectives": {
             "fr": [
-              "Maîtriser les notions clés de la leçon: Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-              "Développer les compétences orales et écrites associées",
-              "Utiliser le vocabulaire et la grammaire en contexte réel"
+              "Analyser un texte d'actualité socio-économique ou culturel francophone",
+              "Maîtriser la voix passive dans les compte-rendus et articles (ex: Le projet a été voté)",
+              "Présenter un rapport synthétique sur un enjeu économique à Madagascar"
             ],
             "mg": [
-              "Hahazo tsara ny fampianarana momba ny: Kultiora sy Toekarena Francophone (Culture, Économie & Voix passive)",
-              "Hampitombo ny fahaizana miteny sy manoratra",
-              "Hampiasa ny voambolana sy ny fitsipika amin'ny fiainana andavanandro"
+              "Mamaky sy mamakafaka lahatsoratra toekarena na kolontsaina francophone",
+              "Hampiasa tsara ny 'voix passive' amin me tatitra sy gazety (ex: Le projet a été voté)",
+              "Manao tatitra sy famintinana momba ny toekarena eto Madagasikara"
             ]
           }
         }
